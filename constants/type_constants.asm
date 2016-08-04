@@ -9,11 +9,11 @@ PHYSICAL EQU const_value
 	const ROCK
 	const BIRD
 	const BUG
-	const GHOST
+	const DARK
 	const STEEL
 
 UNUSED_TYPES EQU const_value
-	const TYPE_10
+	const HOVER
 	const TYPE_11
 	const TYPE_12
 	const TYPE_13
@@ -33,6 +33,6 @@ SPECIAL EQU const_value
 	const PSYCHIC
 	const ICE
 	const DRAGON
-	const DARK
+	const GHOST
 
 TYPES_END EQU const_value

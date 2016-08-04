@@ -1107,7 +1107,7 @@ IsHM:: ; 34df
 	scf
 	ret
 .NotHM
-	and a
+	scf
 	ret
 ; 34e7
 

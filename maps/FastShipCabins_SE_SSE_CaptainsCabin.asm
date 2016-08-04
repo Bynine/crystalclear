@@ -106,7 +106,7 @@ UnknownScript_0x75f44:
 UnknownScript_0x75f58:
 	writetext UnknownText_0x7619b
 	keeptextopen
-	verbosegiveitem METAL_COAT, 1
+	verbosegiveitem ALLOY_STONE, 1
 	iffalse UnknownScript_0x75f65
 	setevent EVENT_GOT_METAL_COAT_FROM_GRANDPA_ON_SS_AQUA
 UnknownScript_0x75f65:

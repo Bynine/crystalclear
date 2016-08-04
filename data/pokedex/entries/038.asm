@@ -7,4 +7,4 @@
 	next "and each of its"
 	page "tails is loaded"
 	next "with supernatural"
-	next "powers.@"
+	next "spirit powers.@"

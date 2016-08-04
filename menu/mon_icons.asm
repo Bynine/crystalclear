@@ -45,7 +45,7 @@ MonMenuIcons: ; 8eac4
 	db ICON_FOX          ; NIDORAN_F
 	db ICON_FOX          ; NIDORINA
 	db ICON_MONSTER      ; NIDOQUEEN
-	db ICON_FOX          ; NIDORAN_M
+	db ICON_EQUINE       ; NIDORAN_M
 	db ICON_FOX          ; NIDORINO
 	db ICON_MONSTER      ; NIDOKING
 	db ICON_CLEFAIRY     ; CLEFAIRY
@@ -136,7 +136,7 @@ MonMenuIcons: ; 8eac4
 	db ICON_STARYU       ; STARYU
 	db ICON_STARYU       ; STARMIE
 	db ICON_HUMANSHAPE   ; MR__MIME
-	db ICON_BUG          ; SCYTHER
+	db ICON_MONSTERSKY   ; SCYTHER
 	db ICON_HUMANSHAPE   ; JYNX
 	db ICON_HUMANSHAPE   ; ELECTABUZZ
 	db ICON_HUMANSHAPE   ; MAGMAR
@@ -155,7 +155,7 @@ MonMenuIcons: ; 8eac4
 	db ICON_SHELL        ; OMASTAR
 	db ICON_SHELL        ; KABUTO
 	db ICON_SHELL        ; KABUTOPS
-	db ICON_BIRD         ; AERODACTYL
+	db ICON_MONSTERSKY   ; AERODACTYL
 	db ICON_SNORLAX      ; SNORLAX
 	db ICON_BIRD         ; ARTICUNO
 	db ICON_BIRD         ; ZAPDOS
@@ -165,9 +165,9 @@ MonMenuIcons: ; 8eac4
 	db ICON_BIGMON       ; DRAGONITE
 	db ICON_HUMANSHAPE   ; MEWTWO
 	db ICON_HUMANSHAPE   ; MEW
-	db ICON_ODDISH       ; CHIKORITA
-	db ICON_ODDISH       ; BAYLEEF
-	db ICON_ODDISH       ; MEGANIUM
+	db ICON_EQUINE       ; CHIKORITA
+	db ICON_EQUINE       ; BAYLEEF
+	db ICON_EQUINE       ; MEGANIUM
 	db ICON_FOX          ; CYNDAQUIL
 	db ICON_FOX          ; QUILAVA
 	db ICON_FOX          ; TYPHLOSION
@@ -186,10 +186,10 @@ MonMenuIcons: ; 8eac4
 	db ICON_FISH         ; CHINCHOU
 	db ICON_FISH         ; LANTURN
 	db ICON_PIKACHU      ; PICHU
-	db ICON_CLEFAIRY     ; CLEFFA
-	db ICON_JIGGLYPUFF   ; IGGLYBUFF
-	db ICON_CLEFAIRY     ; TOGEPI
-	db ICON_BIRD         ; TOGETIC
+	db ICON_EQUINE       ; CLEFFA
+	db ICON_LAPRAS       ; IGGLYBUFF
+	db ICON_EGG          ; TOGEPI
+	db ICON_CLEFAIRY     ; TOGETIC
 	db ICON_BIRD         ; NATU
 	db ICON_BIRD         ; XATU
 	db ICON_FOX          ; MAREEP
@@ -220,12 +220,12 @@ MonMenuIcons: ; 8eac4
 	db ICON_BUG          ; PINECO
 	db ICON_BUG          ; FORRETRESS
 	db ICON_SERPENT      ; DUNSPARCE
-	db ICON_BUG          ; GLIGAR
+	db ICON_MONSTERSKY   ; GLIGAR
 	db ICON_SERPENT      ; STEELIX
 	db ICON_MONSTER      ; SNUBBULL
 	db ICON_MONSTER      ; GRANBULL
-	db ICON_FISH         ; QWILFISH
-	db ICON_BUG          ; SCIZOR
+	db ICON_GHOST        ; WIREGAUST
+	db ICON_MONSTERSKY   ; SCIZOR
 	db ICON_BUG          ; SHUCKLE
 	db ICON_BUG          ; HERACROSS
 	db ICON_FOX          ; SNEASEL
@@ -237,18 +237,18 @@ MonMenuIcons: ; 8eac4
 	db ICON_EQUINE       ; PILOSWINE
 	db ICON_SHELL        ; CORSOLA
 	db ICON_FISH         ; REMORAID
-	db ICON_FISH         ; OCTILLERY
+	db ICON_SHELL        ; OCTILLERY
 	db ICON_MONSTER      ; DELIBIRD
 	db ICON_FISH         ; MANTINE
 	db ICON_BIRD         ; SKARMORY
 	db ICON_FOX          ; HOUNDOUR
 	db ICON_FOX          ; HOUNDOOM
-	db ICON_BIGMON       ; KINGDRA
+	db ICON_SERPENT      ; KINGDRA
 	db ICON_EQUINE       ; PHANPY
 	db ICON_EQUINE       ; DONPHAN
 	db ICON_VOLTORB      ; PORYGON2
 	db ICON_EQUINE       ; STANTLER
-	db ICON_MONSTER      ; SMEARGLE
+	db ICON_FOX          ; SMEARGLE
 	db ICON_FIGHTER      ; TYROGUE
 	db ICON_FIGHTER      ; HITMONTOP
 	db ICON_HUMANSHAPE   ; SMOOCHUM
@@ -265,6 +265,8 @@ MonMenuIcons: ; 8eac4
 	db ICON_LUGIA        ; LUGIA
 	db ICON_HO_OH        ; HO_OH
 	db ICON_HUMANSHAPE   ; CELEBI
+	db ICON_HUMANSHAPE   ; SAMURIGHT
+	db ICON_EGG          ; EGG
 
 IconPointers:
 	dw NullIcon
@@ -306,6 +308,7 @@ IconPointers:
 	dw SlowpokeIcon
 	dw SudowoodoIcon
 	dw BigmonIcon
+	dw MonsterSkyIcon
 
 Icons:
 NullIcon:
@@ -347,3 +350,4 @@ GyaradosIcon:     INCBIN "gfx/icon/gyarados.2bpp" ; 0x8fd0d
 SlowpokeIcon:     INCBIN "gfx/icon/slowpoke.2bpp" ; 0x8fd8d
 SudowoodoIcon:    INCBIN "gfx/icon/sudowoodo.2bpp" ; 0x8fe0d
 BigmonIcon:       INCBIN "gfx/icon/bigmon.2bpp" ; 0x8fe8d
+MonsterSkyIcon:   INCBIN "gfx/icon/monstersky.2bpp" ; ???

@@ -57,7 +57,7 @@ ItemDescriptions:
 	dw FireStoneDesc
 	dw ThunderStoneDesc
 	dw WaterStoneDesc
-	dw TeruSama2Desc
+	dw ShinyFeatherDesc
 	dw HPUpDesc
 	dw ProteinDesc
 	dw IronDesc
@@ -77,12 +77,12 @@ ItemDescriptions:
 	dw SuperRepelDesc
 	dw MaxRepelDesc
 	dw DireHitDesc
-	dw TeruSama3Desc
+	dw RoeDesc
 	dw FreshWaterDesc
 	dw SodaPopDesc
 	dw LemonadeDesc
 	dw XAttackDesc
-	dw TeruSama4Desc
+	dw RareGemDesc
 	dw XDefendDesc
 	dw XSpeedDesc
 	dw XSpecialDesc
@@ -122,7 +122,7 @@ ItemDescriptions:
 	dw BigMushroomDesc
 	dw SilverPowderDesc
 	dw BluApricornDesc
-	dw TeruSama6Desc
+	dw BattleItem1Desc
 	dw AmuletCoinDesc
 	dw YlwApricornDesc
 	dw GrnApricornDesc
@@ -179,22 +179,22 @@ ItemDescriptions:
 	dw DragonFangDesc
 	dw TeruSama14Desc
 	dw LeftoversDesc
-	dw TeruSama15Desc
-	dw TeruSama16Desc
+	dw HoneyDesc
+	dw SoftWoolDesc
 	dw TeruSama17Desc
 	dw MysteryBerryDesc
 	dw DragonScaleDesc
 	dw BerserkGeneDesc
 	dw TeruSama18Desc
 	dw TeruSama19Desc
-	dw TeruSama20Desc
+	dw FabledStoneDesc
 	dw SacredAshDesc
 	dw HeavyBallDesc
 	dw FlowerMailDesc
 	dw LevelBallDesc
 	dw LureBallDesc
 	dw FastBallDesc
-	dw TeruSama21Desc
+	dw AlloyStoneDesc
 	dw LightBallDesc
 	dw FriendBallDesc
 	dw MoonBallDesc
@@ -384,8 +384,9 @@ WaterStoneDesc:
 	db   "Evolves certain"
 	next "kinds of #MON.@"
 
-TeruSama2Desc:
-	db   "?@"
+ShinyFeatherDesc:
+	db   "A bird's gleaming"
+	next "feather. Sell it.@"
 
 HPUpDesc:
 	db   "Raises the HP of"
@@ -463,8 +464,9 @@ DireHitDesc:
 	db   "Ups critical hit"
 	next "ratio. (1 BTL)@"
 
-TeruSama3Desc:
-	db   "?@"
+RoeDesc:
+	db   "Fresh fish eggs."
+	next "Sell or eat.@"
 
 FreshWaterDesc:
 	db   "Restores #MON"
@@ -482,8 +484,9 @@ XAttackDesc:
 	db   "Raises ATTACK."
 	next "(1 BTL)@"
 
-TeruSama4Desc:
-	db   "?@"
+RareGemDesc:
+	db   "A glittering gem."
+	next "Sell high.@"
 
 XDefendDesc:
 	db   "Raises DEFENSE."
@@ -638,8 +641,9 @@ SilverPowderDesc:
 BluApricornDesc:
 	db   "A blue APRICORN.@"
 
-TeruSama6Desc:
-	db   "?@"
+BattleItem1Desc:
+	db   "..."
+	next "... (HOLD)@"
 
 AmuletCoinDesc:
 	db   "Doubles monetary"
@@ -853,11 +857,13 @@ LeftoversDesc:
 	db   "Restores HP during"
 	next "battle. (HOLD)@"
 
-TeruSama15Desc:
-	db   "?@"
+HoneyDesc:
+	db   "Restores #MON"
+	next "HP by 50.@"
 
-TeruSama16Desc:
-	db   "?@"
+SoftWoolDesc:
+	db   "Silky cotton."
+	db   "Sell.@"
 
 TeruSama17Desc:
 	db   "?@"
@@ -880,8 +886,9 @@ TeruSama18Desc:
 TeruSama19Desc:
 	db   "?@"
 
-TeruSama20Desc:
-	db   "?@"
+FabledStoneDesc:
+	db   "Evolves certain"
+	next "kinds of #MON.@"
 
 SacredAshDesc:
 	db   "Fully revives all"
@@ -907,8 +914,9 @@ FastBallDesc:
 	db   "A BALL for catch-"
 	next "ing fast #MON.@"
 
-TeruSama21Desc:
-	db   "?@"
+AlloyStoneDesc:
+	db   "Evolves certain"
+	next "kinds of #MON.@"
 
 LightBallDesc:
 	db   "An odd, electrical"
@@ -946,8 +954,8 @@ TeruSama22Desc:
 	db   "?@"
 
 UpGradeDesc:
-	db   "A mysterious box"
-	next "made by SILPH CO.@"
+	db   "SILPH CO's v.1.1"
+	next "PORYGON patch.@"
 
 BerryDesc:
 	db   "A self-restore"

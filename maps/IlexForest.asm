@@ -456,7 +456,7 @@ UnknownScript_0x6ee42:
 	pause 20
 	clearflag ENGINE_HAVE_EXAMINED_GS_BALL
 	special Special_CelebiShrineEvent
-	loadpokedata CELEBI, 30
+	loadpokedata CELEBI, 50
 	startbattle
 	returnafterbattle
 	pause 20

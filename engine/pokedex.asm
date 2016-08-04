@@ -1906,9 +1906,9 @@ Strings_40fe4: ; 40fe4
 	db "PSYCHIC @"
 	db "  BUG   @"
 	db "  ROCK  @"
-	db " GHOST  @"
+	db "  GHOST  @"
 	db " DRAGON @"
-	db "  DARK  @"
+	db " DARK  @"
 	db " STEEL  @"
 ; 41086
 
@@ -2001,9 +2001,9 @@ Unknown_410f6: ; 410f6
 	db PSYCHIC
 	db BUG
 	db ROCK
-	db GHOST
-	db DRAGON
 	db DARK
+	db DRAGON
+	db GHOST
 	db STEEL
 ; 41107
 

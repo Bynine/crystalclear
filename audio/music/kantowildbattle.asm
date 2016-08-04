@@ -7,7 +7,7 @@ Music_KantoWildBattle: ; ed06d
 	db $3
 
 Music_KantoWildBattle_Ch1: ; ed077
-	tempo 112
+	tempo 100
 	volume $77
 	vibrato $12, $23
 	dutycycle $2

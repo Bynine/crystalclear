@@ -281,6 +281,7 @@ Mart20: ; 1619a
 	db X_ATTACK
 	db DIRE_HIT
 	db SURF_MAIL
+	db BERSERK_GENE
 	db $ff
 ; 161a5
 
@@ -421,6 +422,8 @@ Mart32: ; 16205
 	db MAX_POTION
 	db FULL_RESTORE
 	db REVIVE
+	db FABLED_STONE
+	db ALLOY_STONE
 	db FULL_HEAL
 	db $ff
 ; 1620e

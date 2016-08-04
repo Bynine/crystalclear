@@ -5,6 +5,6 @@
 	db   "This #MON's"
 	next "stomach is so"
 	next "strong, even"
-	page "eating moldy or"
-	next "rotten food will"
+	page "eating pizza with"
+	next "ketchup will"
 	next "not affect it.@"

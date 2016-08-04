@@ -210,7 +210,7 @@
 	dw SteelixPokedexEntry
 	dw SnubbullPokedexEntry
 	dw GranbullPokedexEntry
-	dw QwilfishPokedexEntry
+	dw WiregaustPokedexEntry
 	dw ScizorPokedexEntry
 	dw ShucklePokedexEntry
 	dw HeracrossPokedexEntry
@@ -251,3 +251,6 @@
 	dw LugiaPokedexEntry
 	dw HoOhPokedexEntry
 	dw CelebiPokedexEntry
+	dw SamuraiPokedexEntry
+	dw Dummy254PokedexEntry
+	dw Dummy255PokedexEntry

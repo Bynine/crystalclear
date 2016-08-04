@@ -61,20 +61,18 @@ UnknownScript_0x7a531:
 	writetext UnknownText_0x7a763
 	yesorno
 	iffalse UnknownScript_0x7a542
-	jump UnknownScript_0x7a53b
-
-UnknownScript_0x7a53b:
-	writetext UnknownText_0x7a7cb
-	keeptextopen
-	jump UnknownScript_0x7a549
+	jump IKnowScript
 
 UnknownScript_0x7a542:
 	writetext UnknownText_0x7a807
-	keeptextopen
+	writetext UnknownText_0x7a850
+	jump UnknownScript_0x7a549
+
+IKnowScript:
+	writetext IKnowText
 	jump UnknownScript_0x7a549
 
 UnknownScript_0x7a549:
-	writetext UnknownText_0x7a850
 	closetext
 	loadmovesprites
 	checkevent EVENT_GAVE_KURT_APRICORNS
@@ -237,9 +235,6 @@ UnknownText_0x7a6bd:
 
 	para "Oh, the day of the"
 	line "week isn't set."
-
-	para "You mustn't forget"
-	line "that!"
 	done
 
 UnknownText_0x7a742:
@@ -256,15 +251,15 @@ UnknownText_0x7a763:
 
 	para "By the way, do you"
 	line "know how to use"
-	cont "the PHONE?"
+	cont "your #GEAR?"
 	done
 
 UnknownText_0x7a7cb:
-	text "Don't you just"
-	line "turn the #GEAR"
+	text "Oh, is that so?"
+	line "Don't you just"
 
-	para "on and select the"
-	line "PHONE icon?"
+	para "turn it on and"
+	line "select the PHONE?"
 	done
 
 UnknownText_0x7a807:
@@ -285,6 +280,11 @@ UnknownText_0x7a850:
 
 	para "Gee, isn't that"
 	line "convenient?"
+	done
+
+IKnowText:
+	text "Oh, good! Go"
+	line "get 'em, honey!"
 	done
 
 UnknownText_0x7a8b5:
@@ -357,8 +357,8 @@ StoveText:
 
 SinkText:
 	text "The sink is spot-"
-	line "less. Mom likes it"
-	cont "clean."
+	line "less. Except for"
+	cont "the blood…"
 	done
 
 FridgeText:

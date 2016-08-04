@@ -174,17 +174,17 @@ UnknownText_0x68648:
 	cont "used only once."
 
 	para "TM31 contains"
-	line "MUD-SLAP."
+	line "SWIFT DIVE."
 
-	para "It reduces the"
-	line "enemy's accuracy"
+	para "It's a diving"
+	line "attack that"
 
-	para "while it causes"
-	line "damage."
+	para "can never miss"
+	line "the foe."
 
 	para "In other words, it"
-	line "is both defensive"
-	cont "and offensive."
+	line "is always useful"
+	cont "for nimble foes."
 	done
 
 UnknownText_0x68735:

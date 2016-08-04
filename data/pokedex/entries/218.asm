@@ -2,7 +2,7 @@
 	db "LAVA@" ; species name
 	dw 204, 770 ; height, width
 	
-	db   "These group to-"
+	db   "They group to-"
 	next "gether in areas"
 	next "that are hotter"
 	page "than normal. If it"

@@ -1,11 +1,11 @@
 PokemonPalettes: ; a8ce
 
 ; 000
-	RGB 30, 22, 17
-	RGB 16, 14, 19
+	RGB 00, 00, 00
+	RGB 15, 15, 15
 ; 000 shiny
-	RGB 30, 22, 17
-	RGB 16, 14, 19
+	RGB 31, 31, 31
+	RGB 15, 15, 15
 
 BulbasaurPalette:       INCLUDE "gfx/pics/bulbasaur/normal.pal"
 BulbasaurShinyPalette:  INCLUDE "gfx/pics/bulbasaur/shiny.pal"
@@ -427,8 +427,8 @@ SnubbullPalette:        INCLUDE "gfx/pics/snubbull/normal.pal"
 SnubbullShinyPalette:   INCLUDE "gfx/pics/snubbull/shiny.pal"
 GranbullPalette:        INCLUDE "gfx/pics/granbull/normal.pal"
 GranbullShinyPalette:   INCLUDE "gfx/pics/granbull/shiny.pal"
-QwilfishPalette:        INCLUDE "gfx/pics/qwilfish/normal.pal"
-QwilfishShinyPalette:   INCLUDE "gfx/pics/qwilfish/shiny.pal"
+WiregaustPalette:        INCLUDE "gfx/pics/qwilfish/normal.pal"
+WiregaustShinyPalette:   INCLUDE "gfx/pics/qwilfish/shiny.pal"
 ScizorPalette:          INCLUDE "gfx/pics/scizor/normal.pal"
 ScizorShinyPalette:     INCLUDE "gfx/pics/scizor/shiny.pal"
 ShucklePalette:         INCLUDE "gfx/pics/shuckle/normal.pal"
@@ -509,33 +509,39 @@ HoOhPalette:            INCLUDE "gfx/pics/ho_oh/normal.pal"
 HoOhShinyPalette:       INCLUDE "gfx/pics/ho_oh/shiny.pal"
 CelebiPalette:          INCLUDE "gfx/pics/celebi/normal.pal"
 CelebiShinyPalette:     INCLUDE "gfx/pics/celebi/shiny.pal"
+SamuraiPalette:         INCLUDE "gfx/pics/samurai/normal.pal"
+SamuraiShinyPalette:    INCLUDE "gfx/pics/samurai/shiny.pal"
+Dummy254Palette:        INCLUDE "gfx/pics/dummy254/normal.pal"
+Dummy254ShinyPalette:   INCLUDE "gfx/pics/dummy254/shiny.pal"
+Dummy255Palette:        INCLUDE "gfx/pics/dummy255/normal.pal"
+Dummy255ShinyPalette:   INCLUDE "gfx/pics/dummy255/shiny.pal"
 
 ; 252
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+;	RGB 30, 26, 11
+;	RGB 23, 16, 00
 ; 252 shiny
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+;	RGB 30, 26, 11
+;	RGB 23, 16, 00
 
 ; Egg
 	RGB 30, 26, 11
 	RGB 23, 16, 00
 ; Egg shiny
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+	RGB 00, 26, 11
+	RGB 23, 16, 30
 
 ; 254
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+;	RGB 30, 26, 11
+;	RGB 23, 16, 00
 ; 254 shiny
-	RGB 30, 26, 11
-	RGB 23, 16, 00
+;	RGB 30, 26, 11
+;	RGB 23, 16, 00
 
 ; 255
-	RGB 23, 23, 23
-	RGB 17, 17, 17
+;	RGB 23, 23, 23
+;	RGB 17, 17, 17
 ; 255 shiny
-	RGB 23, 23, 23
-	RGB 17, 17, 17
+;	RGB 23, 23, 23
+;	RGB 17, 17, 17
 
 ; b0ce

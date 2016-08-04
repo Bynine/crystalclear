@@ -731,17 +731,17 @@ UnknownText_0x6d8e6:
 	done
 
 UnknownText_0x6d8f8:
-	text "That's WHIRLPOOL."
+	text "That's STILL."
 	line "Teach it to a"
 
-	para "#MON to get"
-	line "across wild water."
+	para "#MON to calm"
+	line "wild water."
 
 	para "But keep this in"
 	line "mind."
 
-	para "You can use that"
-	line "out of battle only"
+	para "You can only use"
+	line "it on whirlpools"
 
 	para "with the BADGE"
 	line "from MAHOGANY GYM."

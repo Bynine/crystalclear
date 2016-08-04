@@ -27,10 +27,10 @@ PikachuCryHeader:     dw $0f,  $0ee,  $081
 RaichuCryHeader:      dw $09,  $0ee,  $088
 SandshrewCryHeader:   dw $00,  $020,  $0c0
 SandslashCryHeader:   dw $00,  $0ff,  $17f
-NidoranFCryHeader:    dw $01,  $000,  $100
+NidoranFCryHeader:    dw $00,  $000,  $100
 NidorinaCryHeader:    dw $01,  $02c,  $160
 NidoqueenCryHeader:   dw $0a,  $000,  $100
-NidoranMCryHeader:    dw $00,  $000,  $100
+NidoranMCryHeader:    dw $33,  $000,  $0c0
 NidorinoCryHeader:    dw $00,  $02c,  $140
 NidokingCryHeader:    dw $09,  $000,  $100
 ClefairyCryHeader:    dw $19,  $0cc,  $081
@@ -171,8 +171,8 @@ CrobatCryHeader:      dw $1d, -$010,  $140
 ChinchouCryHeader:    dw $30,  $3c9,  $140
 LanturnCryHeader:     dw $30,  $2d0,  $110
 PichuCryHeader:       dw $40,  $000,  $140
-CleffaCryHeader:      dw $34,  $061,  $091
-IgglybuffCryHeader:   dw $31,  $0e8,  $0e8
+CleffaCryHeader:      dw $2b, -$03c,  $1e8
+IgglybuffCryHeader:   dw $34,  $07b,  $000
 TogepiCryHeader:      dw $28,  $010,  $100
 TogeticCryHeader:     dw $2c,  $03b,  $038
 NatuCryHeader:        dw $3b, -$067,  $100
@@ -206,10 +206,10 @@ PinecoCryHeader:      dw $2f,  $080,  $100
 ForretressCryHeader:  dw $2f,  $000,  $180
 DunsparceCryHeader:   dw $42,  $1c4,  $100
 GligarCryHeader:      dw $33, -$102,  $100
-SteelixCryHeader:     dw $3a,  $0ef,  $0f7
+SteelixCryHeader:     dw $3a, -$0ef,  $0f7
 SnubbullCryHeader:    dw $42,  $112,  $0e8
 GranbullCryHeader:    dw $42,  $000,  $180
-QwilfishCryHeader:    dw $2f,  $160,  $0e0
+WiregaustCryHeader:    dw $1c,  $055,  $200
 ScizorCryHeader:      dw $3e,  $000,  $160
 ShuckleCryHeader:     dw $42,  $290,  $0a8
 HeracrossCryHeader:   dw $3e,  $035,  $0e0
@@ -250,8 +250,7 @@ TyranitarCryHeader:   dw $2a, -$100,  $180
 LugiaCryHeader:       dw $3a,  $000,  $100
 HoOhCryHeader:        dw $41,  $000,  $180
 CelebiCryHeader:      dw $37,  $14a,  $111
-CryHeader252:         dw 0,    0,     0
-CryHeader253:         dw 0,    0,     0
-CryHeader254:         dw 0,    0,     0
-CryHeader255:         dw 0,    0,     0
+SamuraiCryHeader:     dw $10, -$116,  $100
+Dummy254CryHeader:    dw $20, -$040,  $255
+Dummy255CryHeader:    dw $3e,  $040,  $111
 ; f2d81

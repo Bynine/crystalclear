@@ -14,11 +14,11 @@ Music_CrystalOpening_Ch1: ; 1786f4
 	stereopanning $f0
 	notetype $c, $92
 	octave 2
+	note C#, 2
+	note F#, 8
 	note F#, 2
-	note F#, 4
 	note F#, 2
-	note F#, 2
-	note F#, 4
+	note C#, 8
 	note F#, 2
 	note F#, 2
 	note F#, 4

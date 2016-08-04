@@ -1,10 +1,10 @@
 ; IgglybuffPokedexEntry: ; 0x1cd32c
-	db "BALLOON@" ; species name
-	dw 100, 20 ; height, width
+	db "KINDLY@" ; species name
+	dw 304, 900 ; height, width
 	
-	db   "Instead of walking"
-	next "with its short"
-	next "legs, it moves"
-	page "around by bouncing"
-	next "on its soft,"
-	next "tender body.@"
+	db   "It determinedly"
+	next "practices swimming"
+	next "for the time when"
+	page "it can ferry its"
+	next "trainer around on"
+	next "its back.@"

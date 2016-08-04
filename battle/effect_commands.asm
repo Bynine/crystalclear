@@ -724,7 +724,7 @@ BattleCommand02: ; 343db
 
 	; risingbadge
 	bit 7, [hl]
-	ld a, MAX_LEVEL + 1
+	ld a, MAX_LEVEL + 10
 	jr nz, .getlevel
 
 	; stormbadge
@@ -1289,7 +1289,7 @@ endr
 	ret
 
 .Criticals
-	db KARATE_CHOP, RAZOR_WIND, RAZOR_LEAF, CRABHAMMER, SLASH, AEROBLAST, CROSS_CHOP, $ff
+	db KARATE_CHOP, RAZOR_WIND, CUT, RAZOR_LEAF, CRABHAMMER, SLASH, AEROBLAST, SELFDESTRUCT, CROSS_CHOP, $ff
 .Chances
 	; 6.25% 12.1% 24.6% 33.2% 49.6% 49.6% 49.6%
 	db $11,  $20,  $40,  $55,  $80,  $80,  $80
@@ -3604,6 +3604,21 @@ ThickClubBoost: ; 353b5
 	ret
 ; 353c3
 
+;MightDaisyBoost: ; 353b5
+;; Return in hl the stat value at hl.
+;
+;; If the attacking monster is Skiploom and
+;; it's holding a Might Daisy, double it.
+;	push bc
+;	push de
+;	ld b, SKIPLOOM
+;	ld c, SKIPLOOM
+;	ld d, MIGHT_DAISY
+;	call SpeciesItemBoost
+;	pop de
+;	pop bc
+;	ret
+; 353c3
 
 LightBallBoost: ; 353c3
 ; Return in hl the stat value at hl.
@@ -9578,9 +9593,9 @@ BattleCommand61: ; 37874
 	jp EndMoveEffect
 
 .table_37907
-	db 40 percent,     40
-	db 70 percent + 1, 80
-	db 80 percent,    120
+	db 40 percent,     100
+	db 70 percent + 1, 200
+	db 80 percent,    255
 	db $ff
 ; 3790e
 
@@ -10031,6 +10046,7 @@ BattleCommand6b: ; 37b78
 BattleCommand6c: ; 37b7c
 ; healnite
 	ld b, NITE
+	jr BattleCommand6a6d
 	; fallthrough
 ; 37b7e
 
@@ -10075,6 +10091,93 @@ BattleCommand6a6c: ; 37b7e
 ; /2 in rain/sandstorm
 	inc c
 	cp WEATHER_SUN
+	jr z, .Heal
+rept 2
+	dec c
+endr
+
+.Heal
+	ld b, 0
+	ld hl, .Multipliers
+rept 2
+	add hl, bc
+endr
+
+	ld a, [hli]
+	ld h, [hl]
+	ld l, a
+	ld a, BANK(GetMaxHP)
+	rst FarCall
+
+	call AnimateCurrentMove
+	call BattleCommand_SwitchTurn
+
+	callab Function3ccef
+
+	call BattleCommand_SwitchTurn
+	call UpdateUserInParty
+
+; 'regained health!'
+	ld hl, RegainedHealthText
+	jp StdBattleTextBox
+
+.Full
+	call AnimateFailedMove
+
+; 'hp is full!'
+	ld hl, HPIsFullText
+	jp StdBattleTextBox
+
+.Multipliers
+	dw GetEighthMaxHP
+	dw GetQuarterMaxHP
+	dw GetHalfMaxHP
+	dw GetMaxHP
+; 37be8
+
+
+
+BattleCommand6a6d: ; 37b7f
+; Moon sensitive heal.
+
+	ld hl, BattleMonMaxHP
+	ld de, BattleMonHP
+	ld a, [hBattleTurn]
+	and a
+	jr z, .start
+	ld hl, EnemyMonMaxHP
+	ld de, EnemyMonHP
+
+.start
+; Index for .Multipliers
+; Default restores half max HP.
+	ld c, 2
+
+; Don't bother healing if HP is already full.
+	push bc
+	call StringCmp
+	pop bc
+	jr z, .Full
+
+; Don't factor in time of day in link battles.
+	ld a, [wLinkMode]
+	and a
+	jr nz, .Weather
+
+	ld a, [TimeOfDay]
+	cp b
+	jr z, .Weather
+	dec c
+
+.Weather
+	ld a, [Weather]
+	and a
+	jr z, .Heal
+
+; x2 in rain
+; /2 in sun/sandstorm
+	inc c
+	cp WEATHER_RAIN
 	jr z, .Heal
 rept 2
 	dec c

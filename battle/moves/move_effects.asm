@@ -9,7 +9,6 @@ Slam:
 VineWhip:
 MegaKick:
 HornAttack:
-Tackle:
 WaterGun:
 HydroPump:
 Surf:
@@ -58,6 +57,7 @@ SleepPowder:
 Hypnosis:
 LovelyKiss:
 Spore:
+Tackle:
 DoSleep:
 	checkobedience
 	usedmovetext
@@ -512,7 +512,6 @@ AccuracyDown:
 	statdownfailtext
 	endmove
 
-SweetScent:
 EvasionDown:
 	checkobedience
 	usedmovetext
@@ -527,6 +526,7 @@ EvasionDown:
 	endmove
 
 Charm:
+SweetScent:
 AttackDown2:
 	checkobedience
 	usedmovetext
@@ -836,6 +836,8 @@ AttackUpHit:
 	endmove
 
 Ancientpower:
+MoonDance:
+Bigglytuff:
 AllUpHit:
 	checkobedience
 	usedmovetext
@@ -953,6 +955,7 @@ FurySwipes:
 BoneRush:
 DoubleKick:
 Bonemerang:
+Swarm:
 MultiHit:
 	checkobedience
 	usedmovetext
@@ -1334,6 +1337,7 @@ RazorWind:
 	supereffectivetext
 	checkdestinybond
 	buildopponentrage
+	flinchtarget
 	kingsrock
 	endmove
 
@@ -1666,14 +1670,6 @@ Spikes:
 	spikes
 	endmove
 
-Foresight:
-	checkobedience
-	usedmovetext
-	doturn
-	checkhit
-	foresight
-	endmove
-
 PerishSong:
 	checkobedience
 	usedmovetext
@@ -1856,6 +1852,7 @@ SacredFire:
 	burntarget
 	endmove
 
+Magnitude2:
 Magnitude:
 	checkobedience
 	usedmovetext

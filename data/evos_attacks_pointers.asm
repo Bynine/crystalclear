@@ -213,7 +213,7 @@ EvosAttacksPointers:: ; 0x425b1
 	dw SteelixEvosAttacks
 	dw SnubbullEvosAttacks
 	dw GranbullEvosAttacks
-	dw QwilfishEvosAttacks
+	dw WiregaustEvosAttacks
 	dw ScizorEvosAttacks
 	dw ShuckleEvosAttacks
 	dw HeracrossEvosAttacks
@@ -254,3 +254,6 @@ EvosAttacksPointers:: ; 0x425b1
 	dw LugiaEvosAttacks
 	dw HoOhEvosAttacks
 	dw CelebiEvosAttacks
+	dw SamuraiEvosAttacks
+	dw Dummy254EvosAttacks
+	dw Dummy255EvosAttacks

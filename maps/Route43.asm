@@ -315,7 +315,7 @@ FruitTreeScript_0x19d266:
 	fruittree $8
 
 ItemFragment_0x19d268:
-	db MAX_ETHER, 1
+	db ALLOY_STONE, 1
 
 PokemaniacBenSeenText:
 	text "I love #MON!"

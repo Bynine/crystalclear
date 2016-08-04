@@ -830,7 +830,7 @@ UnknownScript_0xbd544:
 	checkflag ENGINE_SPECIAL_WILDDATA
 	iftrue UnknownScript_0xbd55c
 	setflag ENGINE_SPECIAL_WILDDATA
-	pokenamemem QWILFISH, $1
+	pokenamemem WIREGAUST, $1
 	displaylocation ROUTE_32, $2
 	writebyte $1
 	special Special_ActivateFishingSwarm

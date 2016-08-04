@@ -101,3 +101,4 @@ Music_BattleTowerTheme
 Music_SuicuneBattle
 Music_BattleTowerLobby
 Music_MobileCenter
+Music_WiregaustBattle

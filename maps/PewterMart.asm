@@ -29,15 +29,15 @@ UnknownText_0x1a2dd8:
 	done
 
 UnknownText_0x1a2e3a:
-	text "There once was a"
-	line "weird old man who"
-	cont "sold MAGIKARP."
+	text "It seems like some"
+	line "fossil #MON"
+	cont "escaped the lab."
 
-	para "He was saying the"
-	line "MAGIKARP from the"
+	para "They're running"
+	line "around Route 3..."
 
-	para "LAKE OF RAGE were"
-	line "excellent."
+	para "I'm afraid to go!"
+	line "They're dangerous!"
 	done
 
 PewterMart_MapEventHeader:

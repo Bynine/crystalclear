@@ -751,7 +751,7 @@ OakSpeech: ; 0x5f99
 	call FadeToWhite
 	call ClearTileMap
 
-	ld a, WOOPER
+	ld a, CLEFFA
 	ld [CurSpecies], a
 	ld [CurPartySpecies], a
 	call GetBaseData
@@ -811,7 +811,7 @@ OakText1: ; 0x6045
 OakText2: ; 0x604a
 	text_jump _OakText2
 	start_asm
-	ld a,WOOPER
+	ld a,CLEFFA
 	call PlayCry
 	call WaitSFX
 	ld hl,OakText3
@@ -5832,7 +5832,7 @@ Jumptable_cdae: ; cdae
 ; cdd9
 
 UnknownText_0xcdd9: ; 0xcdd9
-	; used WHIRLPOOL!
+	; used STILL!
 	text_jump UnknownText_0x1c0816
 	db "@"
 ; 0xcdde
@@ -28374,17 +28374,10 @@ Function28771: ; 28771
 ; Pokémon traded from RBY do not have held items, so GSC usually interprets the
 ; catch rate as an item. However, if the catch rate appears in this table, the
 ; item associated with the table entry is used instead.
-	db ITEM_19, LEFTOVERS
-	db ITEM_2D, BITTER_BERRY
-	db ITEM_32, GOLD_BERRY
-	db ITEM_5A, BERRY
-	db ITEM_64, BERRY
-	db ITEM_78, BERRY
-	db ITEM_87, BERRY
-	db ITEM_BE, BERRY
-	db ITEM_C3, BERRY
-	db ITEM_DC, BERRY
-	db HM_08,   BERRY
+	db SHINY_FEATHER, SHINY_FEATHER
+	db ROE, ROE
+	db RARE_GEM, RARE_GEM
+	db BATTLEITEM1, BERRY
 	db $ff,     BERRY
 	db $00
 ; 2879e
@@ -34229,6 +34222,10 @@ PlayBattleMusic: ; 2ee6c
 	cp BATTLETYPE_ROAMING
 	jp z, .done
 
+	cp BATTLETYPE_WIREGAUST
+	ld de, MUSIC_WIREGAUST_BATTLE
+	jp z, .done
+
 	; Are we fighting a trainer?
 	ld a, [OtherTrainerClass]
 	and a
@@ -34257,11 +34254,17 @@ PlayBattleMusic: ; 2ee6c
 	cp RED
 	jr z, .done
 
-	; really, they should have included admins and scientists here too...
+	; really, they should have included admins and scientists here too... ;edit: fixed!
 	ld de, MUSIC_ROCKET_BATTLE
 	cp GRUNTM
 	jr z, .done
 	cp GRUNTF
+	jr z, .done
+	cp SCIENTIST
+	jr z, .done
+	cp EXECUTIVEM
+	jr z, .done
+	cp EXECUTIVEF
 	jr z, .done
 
 	ld de, MUSIC_KANTO_GYM_LEADER_BATTLE
@@ -35069,7 +35072,7 @@ endr
 	ld b, a
 
 	cp EVOLVE_TRADE
-	jr z, .trade
+	jp z, .trade
 
 	ld a, [wLinkMode]
 	and a
@@ -35090,6 +35093,8 @@ endr
 	cp EVOLVE_HAPPINESS
 	jr z, .happiness
 
+	cp EVOLVE_GENDER ; calls the evolve-by-gender routine
+	jr z, .gender ; go to the routine
 
 ; EVOLVE_STAT
 	ld a, [TempMonLevel]
@@ -35117,12 +35122,27 @@ endr
 	jp nz, .asm_423f9
 
 	inc hl
-	jr .asm_422fd
+	jp .asm_422fd
 
+.gender
+	ld a, [TempMonLevel] ; loads the Pokemon's level
+	cp [hl]
+	jp c, .asm_423f8 ; if it's not that level, quit out
+
+	call Function42461 ; check everstone
+	jp z, .asm_423f8 ; if it has an everstone, quit out
+
+	push hl
+	ld [MonType], a
+	callba GetGender ; loads the Pokemon's gender
+	ld a, FEMALE
+	jp z, .asm_4227a ; if it needs to be female to evolve, it evolves
+	ld a, MALE
+	jp nz, .asm_4227a ; if it needs to be male to evolve, it evolves
 
 .happiness
 	ld a, [TempMonHappiness]
-	cp 220
+	cp 200
 	jp c, .asm_423f9
 
 	call Function42461
@@ -35198,7 +35218,7 @@ endr
 	call Function42461
 	jp z, .asm_423fa
 
-.asm_422fd
+.asm_422fd  ; evolve
 	ld a, [TempMonLevel]
 	ld [CurPartyLevel], a
 	ld a, $1
@@ -64789,75 +64809,75 @@ TreeMons: ; b82e8
 ;	db  %, species, level
 
 TreeMons1: ; b82fa
-	db 50, SPEAROW,    10
+	db  5, SPEAROW,    10
+	db 10, SPEAROW,    10
 	db 15, SPEAROW,    10
-	db 15, SPEAROW,    10
-	db 10, AIPOM,      10
-	db  5, AIPOM,      10
-	db  5, AIPOM,      10
+	db 30, AIPOM,      10
+	db 30, AIPOM,      10
+	db 10, HERACROSS,  10
 	db -1
 
-	db 50, SPEAROW,    10
+	db 50, HERACROSS,  10
 	db 15, HERACROSS,  10
-	db 15, HERACROSS,  10
+	db 15, PINSIR,     10
 	db 10, AIPOM,      10
 	db  5, AIPOM,      10
 	db  5, AIPOM,      10
 	db -1
 
 TreeMons2: ; b8320
-	db 50, SPEAROW,    10
+	db 50, AIPOM,      10
 	db 15, EKANS,      10
 	db 15, SPEAROW,    10
-	db 10, AIPOM,      10
+	db 10, SNEASEL,    10
 	db  5, AIPOM,      10
 	db  5, AIPOM,      10
 	db -1
 
-	db 50, SPEAROW,    10
-	db 15, HERACROSS,  10
-	db 15, HERACROSS,  10
-	db 10, AIPOM,      10
-	db  5, AIPOM,      10
-	db  5, AIPOM,      10
+	db 50, HERACROSS,  10
+	db 15, EKANS,      10
+	db 15, PINSIR,     10
+	db 10, SNEASEL,    10
+	db  5, SNEASEL,    10
+	db  5, SNEASEL,    10
 	db -1
 
 TreeMons3: ; b8346
-	db 50, HOOTHOOT,   10
+	db 50, PINECO,     10
 	db 15, SPINARAK,   10
 	db 15, LEDYBA,     10
 	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db  5, SNEASEL,    10
 	db  5, EXEGGCUTE,  10
 	db -1
 
-	db 50, HOOTHOOT,   10
+	db 50, PINECO,     10
 	db 15, PINECO,     10
 	db 15, PINECO,     10
 	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db  5, SNEASEL,    10
 	db  5, EXEGGCUTE,  10
 	db -1
 
 TreeMons4: ; b836c
-	db 50, HOOTHOOT,   10
+	db 50, PINECO,     10
 	db 15, EKANS,      10
-	db 15, HOOTHOOT,   10
+	db 15, LEDYBA,     10
 	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db  5, SNEASEL,    10
 	db  5, EXEGGCUTE,  10
 	db -1
 
-	db 50, HOOTHOOT,   10
+	db 50, PINECO,     10
 	db 15, PINECO,     10
 	db 15, PINECO,     10
 	db 10, EXEGGCUTE,  10
-	db  5, EXEGGCUTE,  10
+	db  5, SNEASEL,    10
 	db  5, EXEGGCUTE,  10
 	db -1
 
 TreeMons5: ; b8392
-	db 50, HOOTHOOT,   10
+	db 50, VENONAT,    10
 	db 15, VENONAT,    10
 	db 15, HOOTHOOT,   10
 	db 10, EXEGGCUTE,  10
@@ -64865,7 +64885,7 @@ TreeMons5: ; b8392
 	db  5, EXEGGCUTE,  10
 	db -1
 
-	db 50, HOOTHOOT,   10
+	db 50, VENONAT,    10
 	db 15, PINECO,     10
 	db 15, PINECO,     10
 	db 10, EXEGGCUTE,  10
@@ -64874,25 +64894,28 @@ TreeMons5: ; b8392
 	db -1
 
 TreeMons6: ; b83b8
-	db 50, HOOTHOOT,   10
-	db 15, PINECO,     10
-	db 15, PINECO,     10
-	db 10, NOCTOWL,    10
-	db  5, BUTTERFREE, 10
-	db  5, BEEDRILL,   10
+	db 25, PINECO,     10
+	db  5, VENOMOTH,   10
+	db 25, PINECO,     10
+	db 15, NOCTOWL,    10
+	db 15, BUTTERFREE, 10
+	db 15, BEEDRILL,   10
 	db -1
 
-	db 50, HOOTHOOT,   10
-	db 15, CATERPIE,   10
-	db 15, WEEDLE,     10
-	db 10, HOOTHOOT,   10
-	db  5, METAPOD,    10
-	db  5, KAKUNA,     10
+	db 15, PINECO,     10
+	db 25, VENOMOTH,   10
+	db 15, PINECO,     10
+	db 15, NOCTOWL,    10
+	db 25, BUTTERFREE, 10
+	db 25, BEEDRILL,   10
 	db -1
 
 RockMons: ; b83de
-	db 90, KRABBY,     15
-	db 10, SHUCKLE,    15
+	db 40, KRABBY,     15
+	db 30, SHUCKLE,    15
+	db 30, GEODUDE,    15
+	db 9,  GRAVELER,  30
+	db 1,  ONIX,       15
 	db -1
 ; b83e5
 
@@ -76418,7 +76441,7 @@ Pokered_MonIndices: ; fb91c
 	db STEELIX
 	db SNUBBULL
 	db GRANBULL
-	db QWILFISH
+	db WIREGAUST
 	db WOBBUFFET
 	db WOBBUFFET
 ; fba18
@@ -76979,10 +77002,10 @@ GetTradeMonNames: ; fce1b
 
 
 NPCTrades: ; fce58
-	db 0, ABRA,       MACHOP,     "MUSCLE@@@@@", $37, $66, GOLD_BERRY,   $54, $92, "MIKE@@@@@@@", 0, 0
-	db 0, BELLSPROUT, ONIX,       "ROCKY@@@@@@", $96, $66, BITTER_BERRY, $1e, $bf, "KYLE@@@@@@@", 0, 0
-	db 1, KRABBY,     VOLTORB,    "VOLTY@@@@@@", $98, $88, PRZCUREBERRY, $05, $72, "TIM@@@@@@@@", 0, 0
-	db 3, DRAGONAIR,  DODRIO,     "DORIS@@@@@@", $77, $66, SMOKE_BALL,   $1b, $01, "EMY@@@@@@@@", 2, 0
+	db 0, ABRA,       MACHOP,     "JACKIE@@@@@", $37, $66, GOLD_BERRY,   $54, $92, "MIKE@@@@@@@", 0, 0
+	db 0, BELLSPROUT, ODDISH,     "CORDOZAR@@@", $96, $66, SMOKE_BALL,   $1e, $bf, "CALVIN@@@@@", 0, 0
+	db 1, KRABBY,     VOLTORB,    "JERRY@@@@@@", $98, $88, PRZCUREBERRY, $05, $72, "TIM@@@@@@@@", 0, 0
+	db 3, DRAGONAIR,  DODRIO,     "DORIS@@@@@@", $77, $66, MYSTERYBERRY, $1b, $01, "EMY@@@@@@@@", 2, 0
 	db 2, HAUNTER,    XATU,       "PAUL@@@@@@@", $96, $86, MYSTERYBERRY, $00, $3d, "CHRIS@@@@@@", 0, 0
 	db 3, CHANSEY,    AERODACTYL, "AEROY@@@@@@", $96, $66, GOLD_BERRY,   $7b, $67, "KIM@@@@@@@@", 0, 0
 	db 0, DUGTRIO,    MAGNETON,   "MAGGIE@@@@@", $96, $66, METAL_COAT,   $a2, $c3, "FOREST@@@@@", 0, 0
@@ -80454,6 +80477,7 @@ MoveGrammar: ; 105e7a
 	db SCRATCH
 	db VICEGRIP
 	db WING_ATTACK
+	db MOON_DANCE
 	db FLY
 	db BIND
 	db SLAM
@@ -80484,7 +80508,7 @@ MoveGrammar: ; 105e7a
 	db SPIDER_WEB
 	db NIGHTMARE
 	db CURSE
-	db FORESIGHT
+	db SWARM
 	db CHARM
 	db ATTRACT
 	db ROCK_SMASH

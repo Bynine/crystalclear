@@ -2,9 +2,9 @@
 	db "FLAME@" ; species name
 	dw 307, 420 ; height, width
 	
-	db   "If it becomes"
-	next "agitated during"
-	next "battle, it spouts"
-	page "intense flames,"
-	next "incinerating its"
-	next "surroundings.@"
+	db   "The most striking"
+	next "aspect of #MON"
+	next "is how little"
+	page "it resembles a "
+	next "dragon in any way,"
+	next "shape, or form.@"

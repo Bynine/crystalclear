@@ -209,7 +209,7 @@ AnimationPointers:
 	dw SteelixAnimation
 	dw SnubbullAnimation
 	dw GranbullAnimation
-	dw QwilfishAnimation
+	dw WiregaustAnimation
 	dw ScizorAnimation
 	dw ShuckleAnimation
 	dw HeracrossAnimation
@@ -250,3 +250,6 @@ AnimationPointers:
 	dw LugiaAnimation
 	dw HoOhAnimation
 	dw CelebiAnimation
+	dw SamuraiAnimation
+	dw Dummy254Animation
+	dw Dummy255Animation

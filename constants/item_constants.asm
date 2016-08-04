@@ -24,7 +24,7 @@
 	const FIRE_STONE   ; $16
 	const THUNDERSTONE ; $17
 	const WATER_STONE  ; $18
-	const ITEM_19      ; $19
+	const SHINY_FEATHER; $19 ITEM_19
 	const HP_UP        ; $1A
 	const PROTEIN      ; $1B
 	const IRON         ; $1C
@@ -44,12 +44,12 @@
 	const SUPER_REPEL  ; $2A
 	const MAX_REPEL    ; $2B
 	const DIRE_HIT     ; $2C
-	const ITEM_2D      ; $2D
+	const ROE          ; $2D ITEM_2D
 	const FRESH_WATER  ; $2E
 	const SODA_POP     ; $2F
 	const LEMONADE     ; $30
 	const X_ATTACK     ; $31
-	const ITEM_32      ; $32
+	const RARE_GEM     ; $32 ITEM_32
 	const X_DEFEND     ; $33
 	const X_SPEED      ; $34
 	const X_SPECIAL    ; $35
@@ -89,7 +89,7 @@
 	const BIG_MUSHROOM ; $57
 	const SILVERPOWDER ; $58
 	const BLU_APRICORN ; $59
-	const ITEM_5A      ; $5A
+	const BATTLEITEM1  ; $5A ;ITEM_5A
 	const AMULET_COIN  ; $5B
 	const YLW_APRICORN ; $5C
 	const GRN_APRICORN ; $5D
@@ -146,22 +146,22 @@
 	const DRAGON_FANG  ; $90
 	const ITEM_91      ; $91
 	const LEFTOVERS    ; $92
-	const ITEM_93      ; $93
-	const ITEM_94      ; $94
+	const HONEY        ; $93 ITEM_93
+	const SOFT_WOOL    ; $94
 	const ITEM_95      ; $95
 	const MYSTERYBERRY ; $96
 	const DRAGON_SCALE ; $97
 	const BERSERK_GENE ; $98
 	const ITEM_99      ; $99
 	const ITEM_9A      ; $9A
-	const ITEM_9B      ; $9B
+	const FABLED_STONE ; $9B
 	const SACRED_ASH   ; $9C
 	const HEAVY_BALL   ; $9D
 	const FLOWER_MAIL  ; $9E
 	const LEVEL_BALL   ; $9F
 	const LURE_BALL    ; $A0
 	const FAST_BALL    ; $A1
-	const ITEM_A2      ; $A2
+	const ALLOY_STONE  ; $A2
 	const LIGHT_BALL   ; $A3
 	const FRIEND_BALL  ; $A4
 	const MOON_BALL    ; $A5

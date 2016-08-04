@@ -211,7 +211,7 @@ const_value set 1
 	const STEELIX
 	const SNUBBULL
 	const GRANBULL
-	const QWILFISH
+	const WIREGAUST
 	const SCIZOR
 	const SHUCKLE
 	const HERACROSS
@@ -252,12 +252,15 @@ const_value set 1
 	const LUGIA
 	const HO_OH
 	const CELEBI
+	const SAMURAI
 
 const_value SET const_value + -1
 
 NUM_POKEMON EQU const_value
 
 EGG EQU 253
+DUMMY254 EQU 254
+DUMMY255 EQU 255
 
 ; pokemon structure in RAM
 MON_SPECIES            EQUS "PartyMon1Species - PartyMon1"

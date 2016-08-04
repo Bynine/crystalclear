@@ -394,6 +394,7 @@ AI_Smart: ; 386be
 	dbw EFFECT_MIRROR_COAT,      AI_Smart_MirrorCoat
 	dbw EFFECT_SKULL_BASH,       AI_Smart_SkullBash
 	dbw EFFECT_TWISTER,          AI_Smart_Twister
+	dbw EFFECT_MOON_DANCE,       AI_Smart_FlameWheel
 	dbw EFFECT_EARTHQUAKE,       AI_Smart_Earthquake
 	dbw EFFECT_FUTURE_SIGHT,     AI_Smart_FutureSight
 	dbw EFFECT_GUST,             AI_Smart_Gust
@@ -1563,13 +1564,13 @@ endr
 	db CONVERSION
 	db SUPER_FANG
 	db SUBSTITUTE
-	db TRIPLE_KICK
+	db TOXIC
 	db SPIDER_WEB
 	db MIND_READER
-	db FLAME_WHEEL
-	db AEROBLAST
+	db MEAN_LOOK
+	db TAIL_WHIP
 	db COTTON_SPORE
-	db POWDER_SNOW
+	db BIGGLYTUFF
 	db $ff
 ; 38ca4
 
@@ -2562,6 +2563,7 @@ RainDanceMoves: ; 390e7
 	db CRABHAMMER
 	db OCTAZOOKA
 	db WHIRLPOOL
+	db MOONLIGHT
 	db $ff
 ; 390f3
 

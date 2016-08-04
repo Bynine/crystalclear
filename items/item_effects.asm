@@ -38,7 +38,7 @@ ItemEffects: ; e73c
 	dw FireStone
 	dw Thunderstone
 	dw WaterStone
-	dw Item19
+	dw ShinyFeather
 	dw HpUp
 	dw Protein
 	dw Iron
@@ -58,12 +58,12 @@ ItemEffects: ; e73c
 	dw SuperRepel
 	dw MaxRepel
 	dw DireHit
-	dw Item2D
+	dw Roe
 	dw FreshWater
 	dw SodaPop
 	dw Lemonade
 	dw XAttack
-	dw Item32
+	dw RareGem
 	dw XDefend
 	dw XSpeed
 	dw XSpecial
@@ -160,22 +160,22 @@ ItemEffects: ; e73c
 	dw DragonFang
 	dw Item91
 	dw Leftovers
-	dw Item93
-	dw Item94
+	dw Honey
+	dw SoftWool
 	dw Item95
 	dw Mysteryberry
 	dw DragonScale
 	dw BerserkGene
 	dw Item99
 	dw Item9A
-	dw Item9B
+	dw FabledStone
 	dw SacredAsh
 	dw HeavyBall
 	dw FlowerMail
 	dw LevelBall
 	dw LureBall
 	dw FastBall
-	dw ItemA2
+	dw AlloyStone
 	dw LightBall
 	dw FriendBall
 	dw MoonBall
@@ -340,7 +340,7 @@ endr
 ; benefit.
 	ld b, a
 	ld a, [EnemyMonStatus]
-	and 1 << FRZ | SLP
+	and 1 << FRZ | SLP | BRN | PSN | PAR
 	ld c, 10
 	jr nz, .addstatus
 	and a
@@ -951,7 +951,7 @@ endr
 	push bc
 	ld a, BANK(EvosAttacks)
 	call GetFarByte
-	cp MOON_STONE_RED ; BURN_HEAL
+	cp MOON_STONE ; BURN_HEAL ; now fixed
 	pop bc
 	ret nz
 
@@ -1010,7 +1010,7 @@ LoveBallMultiplier:
 	pop de
 	cp d
 	pop bc
-	ret nz ; for the intended effect, this should be “ret z”
+	ret z ; for the intended effect, this should be “ret z” ; edit: fixed
 
 	sla b
 	jr c, .max
@@ -1048,7 +1048,7 @@ FastBallMultiplier:
 	cp -1
 	jr z, .next
 	cp c
-	jr nz, .next ; for the intended effect, this should be “jr nz, .loop”
+	jr nz, .loop ; for the intended effect, this should be “jr nz, .loop” ; edit: fixed
 	sla b
 	jr c, .max
 
@@ -1192,6 +1192,9 @@ FireStone:
 Thunderstone:
 WaterStone:
 LeafStone:
+AlloyStone:
+FabledStone:
+UpGrade:
 SunStone: ; ee0f
 	ld b, $5
 	call Functionf1f9
@@ -1771,7 +1774,9 @@ SodaPop:
 Lemonade:
 MoomooMilk:
 Ragecandybar:
+Roe:
 BerryJuice:
+Honey:
 Berry:
 GoldBerry: ; f186
 	call Functionf1a9
@@ -2146,6 +2151,7 @@ Tablef3af: ; f3af
 	dbw HYPER_POTION, 200
 	dbw SUPER_POTION,  50
 	dbw POTION,        20
+	dbw ROE,           50
 	dbw MAX_POTION,   999
 	dbw FULL_RESTORE, 999
 	dbw MOOMOO_MILK,  100
@@ -2835,12 +2841,11 @@ UnknownText_0xf778: ; 0xf778
 
 
 Brightpowder:
-Item19:
+ShinyFeather:
 LuckyPunch:
 MetalPowder:
 Nugget:
-Item2D:
-Item32:
+RareGem:
 ExpShare:
 SilverLeaf:
 RedScale:
@@ -2907,8 +2912,7 @@ MetalCoat:
 DragonFang:
 Item91:
 Leftovers:
-Item93:
-Item94:
+SoftWool:
 Item95:
 DragonScale:
 BerserkGene:
@@ -2916,11 +2920,9 @@ Item99:
 Item9A:
 Item9B:
 FlowerMail:
-ItemA2:
 LightBall:
 PolkadotBow:
 ItemAB:
-UpGrade:
 ItemB0:
 RainbowWing:
 ItemB3: ; f77d

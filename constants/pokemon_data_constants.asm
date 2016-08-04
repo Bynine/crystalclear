@@ -66,6 +66,7 @@ const_value SET 1
 	const ICON_SLOWPOKE
 	const ICON_SUDOWOODO
 	const ICON_BIGMON
+	const ICON_MONSTERSKY
 
 
 ; evolution types
@@ -75,6 +76,7 @@ const_value SET 1
 	const EVOLVE_TRADE
 	const EVOLVE_HAPPINESS
 	const EVOLVE_STAT
+	const EVOLVE_GENDER
 
 
 BASE_HAPPINESS        EQU 70
@@ -93,6 +95,11 @@ const_value SET 1
 	const ATK_GT_DEF
 	const ATK_LT_DEF
 	const ATK_EQ_DEF
+
+; gender evolution triggers
+const_value SET 1
+	const MALE
+	const FEMALE
 
 NUM_GRASSMON EQU 7
 NUM_WATERMON EQU 3

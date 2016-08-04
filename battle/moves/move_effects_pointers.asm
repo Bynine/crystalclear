@@ -111,7 +111,7 @@
 	dw NormalHit
 	dw Protect
 	dw Spikes
-	dw Foresight
+	dw NormalHit
 	dw PerishSong
 	dw Sandstorm
 	dw Endure

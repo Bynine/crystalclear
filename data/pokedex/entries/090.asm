@@ -2,9 +2,9 @@
 	db "BIVALVE@" ; species name
 	dw 100, 90 ; height, width
 	
-	db   "Clamping on to an"
-	next "opponent reveals"
-	next "its vulnerable"
-	page "parts, so it uses"
-	next "this move only as"
-	next "a last resort.@"
+	db   "A ghost that"
+	next "possessed a clam's"
+	next "shell."
+	page "Its interior is"
+	next "vulnerable but its"
+	next "shell is hard.@"

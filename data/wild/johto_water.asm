@@ -9,13 +9,13 @@
 	map UNION_CAVE_1F
 	db 2 percent ; encounter rate
 	db 15, WOOPER
-	db 20, QUAGSIRE
+	db 20, IGGLYBUFF
 	db 15, QUAGSIRE
 
 	map UNION_CAVE_B1F
 	db 2 percent ; encounter rate
 	db 15, WOOPER
-	db 20, QUAGSIRE
+	db 20, IGGLYBUFF
 	db 15, QUAGSIRE
 
 	map UNION_CAVE_B2F
@@ -32,9 +32,9 @@
 
 	map SLOWPOKE_WELL_B2F
 	db 2 percent ; encounter rate
-	db 15, SLOWPOKE
 	db 20, SLOWPOKE
 	db 20, SLOWBRO
+	db 25, SLOWKING
 
 	map ILEX_FOREST
 	db 2 percent ; encounter rate
@@ -88,7 +88,7 @@
 	db 2 percent ; encounter rate
 	db 15, MAGIKARP
 	db 10, MAGIKARP
-	db 5, MAGIKARP
+	db 5, DRATINI
 
 	map DARK_CAVE_BLACKTHORN_ENTRANCE
 	db 2 percent ; encounter rate
@@ -98,8 +98,8 @@
 
 	map DRAGONS_DEN_B1F
 	db 4 percent ; encounter rate
-	db 15, MAGIKARP
-	db 10, MAGIKARP
+	db 20, GYARADOS
+	db 15, DRATINI
 	db 10, DRATINI
 
 	map OLIVINE_PORT
@@ -116,7 +116,7 @@
 
 	map ROUTE_31
 	db 2 percent ; encounter rate
-	db 20, POLIWAG
+	db 20, CHINCHOU
 	db 15, POLIWAG
 	db 20, POLIWHIRL
 
@@ -135,97 +135,97 @@
 	map ROUTE_35
 	db 4 percent ; encounter rate
 	db 20, PSYDUCK
-	db 15, PSYDUCK
+	db 10, IGGLYBUFF
 	db 20, GOLDUCK
 
 	map ROUTE_40
 	db 6 percent ; encounter rate
-	db 20, TENTACOOL
+	db 20, CHINCHOU
 	db 15, TENTACOOL
 	db 20, TENTACRUEL
 
 	map ROUTE_41
 	db 6 percent ; encounter rate
-	db 20, TENTACOOL
+	db 20, MANTINE
 	db 20, TENTACRUEL
 	db 20, MANTINE
 
 	map ROUTE_42
 	db 4 percent ; encounter rate
-	db 20, GOLDEEN
+	db 20, STARYU
 	db 15, GOLDEEN
 	db 20, SEAKING
 
 	map ROUTE_43
 	db 2 percent ; encounter rate
-	db 20, MAGIKARP
-	db 15, MAGIKARP
+	db 20, CHINCHOU
+	db 15, STARYU
 	db 10, MAGIKARP
 
 	map ROUTE_44
 	db 2 percent ; encounter rate
 	db 25, POLIWAG
-	db 20, POLIWAG
+	db 10, IGGLYBUFF
 	db 25, POLIWHIRL
 
 	map ROUTE_45
 	db 2 percent ; encounter rate
 	db 20, MAGIKARP
 	db 15, MAGIKARP
-	db 5, MAGIKARP
+	db 25, STARYU
 
 	map NEW_BARK_TOWN
 	db 6 percent ; encounter rate
-	db 20, TENTACOOL
+	db 20, KRABBY
 	db 15, TENTACOOL
 	db 20, TENTACRUEL
 
 	map CHERRYGROVE_CITY
 	db 6 percent ; encounter rate
 	db 20, TENTACOOL
-	db 15, TENTACOOL
+	db 15, KRABBY
 	db 20, TENTACRUEL
 
 	map VIOLET_CITY
 	db 2 percent ; encounter rate
 	db 20, POLIWAG
-	db 15, POLIWAG
+	db 10, IGGLYBUFF
 	db 20, POLIWHIRL
 
 	map CIANWOOD_CITY
 	db 6 percent ; encounter rate
-	db 20, TENTACOOL
-	db 15, TENTACOOL
-	db 20, TENTACRUEL
+	db 20, CORSOLA
+	db 15, REMORAID
+	db 20, CORSOLA
 
 	map OLIVINE_CITY
 	db 6 percent ; encounter rate
-	db 20, TENTACOOL
-	db 15, TENTACOOL
+	db 20, CHINCHOU
+	db 15, REMORAID
 	db 20, TENTACRUEL
 
 	map ECRUTEAK_CITY
 	db 2 percent ; encounter rate
 	db 20, POLIWAG
-	db 15, POLIWAG
+	db 15, GOLDEEN
 	db 20, POLIWHIRL
 
 	map LAKE_OF_RAGE
 	db 6 percent ; encounter rate
 	db 15, MAGIKARP
-	db 10, MAGIKARP
+	db 10, GYARADOS
 	db 15, GYARADOS
 
 	map BLACKTHORN_CITY
 	db 4 percent ; encounter rate
 	db 15, MAGIKARP
-	db 10, MAGIKARP
-	db 5, MAGIKARP
+	db 10, IGGLYBUFF
+	db 35, DRAGONAIR
 
 	map SILVER_CAVE_OUTSIDE
 	db 2 percent ; encounter rate
-	db 35, POLIWHIRL
-	db 40, POLIWHIRL
-	db 35, POLIWAG
+	db 45, POLIWHIRL
+	db 50, KINGLER
+	db 45, OCTILLERY
 
 	db -1 ; end

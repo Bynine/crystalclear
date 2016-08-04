@@ -7,7 +7,7 @@ BattleText_PlayerPickuedUpPayDayMoney: ; 0x80730
 ; 0x80746
 
 WildPokemonAppearedText: ; 0x80746
-	text "Wild @"
+	text "A wild @"
 	text_from_ram EnemyMonNick
 	text ""
 	line "appeared!"
@@ -91,8 +91,8 @@ HurtByCurseText: ; 0x80836
 ; 0x8084d
 
 SandstormHitsText: ; 0x8084d
-	text "The SANDSTORM hits"
-	line "<USER>!"
+	text "The SANDSTORM"
+	line "ravages <USER>!"
 	prompt
 ; 0x80864
 
@@ -162,7 +162,7 @@ BattleText_TheSunlightIsStrong: ; 0x80938
 ; 0x80951
 
 BattleText_TheSandstormRages: ; 0x80951
-	text "The SANDSTORM"
+	text "The sand storm"
 	line "rages."
 	prompt
 ; 0x80967
@@ -179,7 +179,7 @@ BattleText_TheSunlightFaded: ; 0x8097a
 ; 0x8098f
 
 BattleText_TheSandstormSubsided: ; 0x8098f
-	text "The SANDSTORM"
+	text "The sand storm"
 	line "subsided."
 	prompt
 ; 0x809a8
@@ -287,8 +287,8 @@ BattleText_TheresNoWillToBattle: ; 0x80b0b
 ; 0x80b26
 
 BattleText_AnEGGCantBattle: ; 0x80b26
-	text "An EGG can't"
-	line "battle!"
+	text "Are you an"
+	line "idiot?"
 	prompt
 ; 0x80b3b
 
@@ -709,7 +709,8 @@ CriticalHitText: ; 0x81086
 ; 0x81097
 
 OneHitKOText: ; 0x81097
-	text "It's a one-hit KO!"
+	text "That was pretty "
+	line "lame!"
 	prompt
 ; 0x810aa
 
@@ -1269,8 +1270,8 @@ BeatUpAttackText: ; 0x8182d
 ; 0x8183b
 
 RefusedGiftText: ; 0x8183b
-	text "<TARGET>"
-	line "refused the gift!"
+	text "<USER> forgot"
+	line "the price tag!"
 	prompt
 ; 0x81850
 

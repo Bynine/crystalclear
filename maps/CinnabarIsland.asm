@@ -12,6 +12,38 @@ CinnabarIsland_MapScriptHeader:
 	setflag ENGINE_FLYPOINT_CINNABAR
 	return
 
+MewtwoScript:
+	musicfadeout MUSIC_NONE, $8
+	faceplayer
+	loadfont
+	writetext MewtwoText
+	cry MEWTWO
+	pause 15
+	loadmovesprites
+	setevent EVENT_FOUGHT_MEWTWO
+	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
+	loadpokedata MEWTWO, 75
+	startbattle
+	disappear $3
+	returnafterbattle
+	end
+
+MewtwoText:
+	text "Human…"
+
+	para "I sense a great"
+	line "power within"
+	cont "you."
+
+	para "Come! Fight me,"
+	line "and prove your"
+	cont "mettle!"
+	done
+
+RemoveMewtwo:
+	disappear $3
+	return
+
 CinnabarIslandBlue:
 	faceplayer
 	loadfont
@@ -145,5 +177,6 @@ CinnabarIsland_MapEventHeader:
 	signpost 1, 9, SIGNPOST_ITEM, MapCinnabarIslandSignpostItem3
 
 .PersonEvents:
-	db 1
+	db 2
 	person_event SPRITE_BLUE, 6, 9, SPRITEMOVEDATA_03, 0, 0, -1, -1, 0, 0, 0, CinnabarIslandBlue, EVENT_BLUE_IN_CINNABAR
+	person_event SPRITE_MONSTER, 1, 9, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, 0, 0, MewtwoScript, EVENT_MEWTWO, -1

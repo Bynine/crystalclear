@@ -209,7 +209,7 @@ FramesPointers:
 	dw SteelixFrames
 	dw SnubbullFrames
 	dw GranbullFrames
-	dw QwilfishFrames
+	dw WiregaustFrames
 	dw ScizorFrames
 	dw ShuckleFrames
 	dw HeracrossFrames
@@ -250,3 +250,4 @@ FramesPointers:
 	dw LugiaFrames
 	dw HoOhFrames
 	dw CelebiFrames
+	dw SamuraiFrames

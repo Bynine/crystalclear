@@ -317,9 +317,9 @@ UnknownText_0x5d12d:
 UnknownText_0x5d1f2:
 	text "Question 1:"
 
-	para "Is there a #MON"
-	line "that appears only"
-	cont "in the morning?"
+	para "Does BUGSY's"
+	line "team have a"
+	cont "YANMA?"
 	done
 
 UnknownText_0x5d231:
@@ -329,27 +329,30 @@ UnknownText_0x5d231:
 	para "Is this statement"
 	line "correct?"
 
-	para "You can't buy a"
-	line "BERRY at a MART."
+	para "STANTLER has a"
+	line "pre-evolution."
 	done
 
 UnknownText_0x5d282:
 	text "Bull's-eye!"
 	line "Question 3:"
 
-	para "Does HM01 contain"
-	line "the move FLASH?"
+	para "Does FALKNER"
+	line "give out a TM"
+
+	para "that slaps mud"
+	line "at the enemy?"
 	done
 
 UnknownText_0x5d2bc:
 	text "So far so good!"
 	line "Question 4:"
 
-	para "Is FALKNER the"
-	line "VIOLET GYM LEADER"
+	para "Are there any"
+	line "#MON who evolve"
 
-	para "who uses bird"
-	line "#MON?"
+	para "based upon"
+	line "their gender?"
 	done
 
 UnknownText_0x5d30e:
@@ -357,11 +360,8 @@ UnknownText_0x5d30e:
 	line "Here's the final"
 	cont "question:"
 
-	para "Do GOLDENROD GAME"
-	line "CORNER's slots"
-
-	para "have CHARMANDER"
-	line "on their reels?"
+	para "Is LEDYBA a"
+	line "BUG/FLYING type?"
 	done
 
 UnknownText_0x5d37b:

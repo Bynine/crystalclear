@@ -1,10 +1,10 @@
 ; NidoranMPokedexEntry: ; 0x182392
-	db "POISON PIN@" ; species name
-	dw 108, 200 ; height, width
+	db "FARM BABY@" ; species name
+	dw 308, 700 ; height, width
 	
-	db   "It constantly"
-	next "moves its large"
-	next "ears in many"
-	page "directions in"
-	next "order to detect"
-	next "danger right away.@"
+	db   "It can barely"
+	next "walk when first"
+	next "born. TAUROS"
+	page "and MILTANK"
+	next "nurture it to"
+	next "help it grow.@"

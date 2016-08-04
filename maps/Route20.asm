@@ -13,6 +13,29 @@ Route20_MapScriptHeader:
 	setevent EVENT_CINNABAR_ROCKS_CLEARED
 	return
 
+ArticunoScript:
+	faceplayer
+	loadfont
+	writetext ArticunoText
+	cry ARTICUNO
+	pause 15
+	loadmovesprites
+	setevent EVENT_FOUGHT_ARTICUNO
+	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
+	loadpokedata ARTICUNO, 60
+	startbattle
+	disappear $4
+	returnafterbattle
+	end
+
+ArticunoText:
+	text "Kree-AH!"
+	done
+
+RemoveArticuno:
+	disappear $4
+	return
+
 TrainerSwimmerfNicole:
 	trainer EVENT_BEAT_SWIMMERF_NICOLE, SWIMMERF, NICOLE, SwimmerfNicoleSeenText, SwimmerfNicoleBeatenText, 0, SwimmerfNicoleScript
 
@@ -127,6 +150,6 @@ Route20_MapEventHeader:
 
 .PersonEvents:
 	db 3
-	person_event SPRITE_SWIMMER_GIRL, 8, 52, SPRITEMOVEDATA_0A, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, 2, 3, TrainerSwimmerfNicole, -1
 	person_event SPRITE_SWIMMER_GIRL, 13, 45, SPRITEMOVEDATA_0A, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, 2, 3, TrainerSwimmerfLori, -1
 	person_event SPRITE_SWIMMER_GUY, 13, 12, SPRITEMOVEDATA_0A, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, 2, 3, TrainerSwimmermCameron, -1
+	person_event SPRITE_BIRD, 3, 34, SPRITEMOVEDATA_01, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, 0, 0, ArticunoScript, EVENT_ARTICUNO

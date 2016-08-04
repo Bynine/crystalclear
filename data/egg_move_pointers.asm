@@ -33,11 +33,11 @@ EggMovePointers:: ; 0x23b11
 	dw NidoranMEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
+	dw ClefairyEggMoves
 	dw NoEggMoves
 	dw VulpixEggMoves
 	dw NoEggMoves
-	dw NoEggMoves
+	dw JigglypuffEggMoves
 	dw NoEggMoves
 	dw ZubatEggMoves
 	dw NoEggMoves
@@ -133,7 +133,7 @@ endc
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw LaprasEggMoves
+	dw NoEggMoves
 	dw NoEggMoves
 	dw EeveeEggMoves
 	dw NoEggMoves
@@ -213,7 +213,7 @@ endc
 	dw NoEggMoves
 	dw SnubbullEggMoves
 	dw NoEggMoves
-	dw QwilfishEggMoves
+	dw WiregaustEggMoves
 	dw NoEggMoves
 	dw ShuckleEggMoves
 	dw HeracrossEggMoves
@@ -236,7 +236,7 @@ endc
 	dw PhanpyEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
-	dw StantlerEggMoves
+	dw NoEggMoves
 	dw NoEggMoves
 	dw TyrogueEggMoves
 	dw NoEggMoves
@@ -249,6 +249,7 @@ endc
 	dw NoEggMoves
 	dw NoEggMoves
 	dw LarvitarEggMoves
+	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves
 	dw NoEggMoves

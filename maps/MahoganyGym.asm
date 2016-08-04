@@ -196,8 +196,8 @@ UnknownText_0x199d55:
 	cont "stats of #MON."
 
 	para "It also lets your"
-	line "#MON use WHIRL-"
-	cont "POOL to get across"
+	line "#MON use STILL"
+	cont "to get across"
 	cont "real whirlpools."
 
 	para "And this… This is"

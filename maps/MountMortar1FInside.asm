@@ -102,7 +102,7 @@ UnknownText_0x7df97:
 	line "trainer who uses a"
 
 	para "SEADRA that knows"
-	line "WATERFALL?"
+	line "ASCEND?"
 	done
 
 MountMortar1FInside_MapEventHeader:

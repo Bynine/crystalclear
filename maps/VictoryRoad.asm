@@ -7,7 +7,13 @@ VictoryRoad_MapScriptHeader:
 	dw UnknownScript_0x74491, 0
 
 .MapCallbacks:
-	db 0
+	db 1
+
+	dbw 2, MoltresCheck
+
+MoltresCheck:
+	checkevent EVENT_FOUGHT_MOLTRES
+	iftrue RemoveMoltres
 
 UnknownScript_0x74490:
 	end
@@ -103,7 +109,7 @@ ItemFragment_0x7452f:
 	db FULL_HEAL, 1
 
 ItemFragment_0x74531:
-	db HP_UP, 1
+	db TM_EARTHQUAKE, 1
 
 MapVictoryRoadSignpostItem0:
 	dwb EVENT_VICTORY_ROAD_HIDDEN_MAX_POTION, MAX_POTION
@@ -234,6 +240,29 @@ UnknownText_0x747aa:
 	line "thing else."
 	done
 
+MoltresScript:
+	faceplayer
+	loadfont
+	writetext MoltresText
+	cry MOLTRES
+	pause 15
+	loadmovesprites
+	setevent EVENT_FOUGHT_MOLTRES
+	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
+	loadpokedata MOLTRES, 50
+	startbattle
+	disappear $7
+	returnafterbattle
+	end
+
+MoltresText:
+	text "Skreaa!"
+	done
+
+RemoveMoltres:
+	disappear $7
+	return
+
 VictoryRoad_MapEventHeader:
 	; filler
 	db 0, 0
@@ -268,4 +297,4 @@ VictoryRoad_MapEventHeader:
 	person_event SPRITE_POKE_BALL, 48, 12, SPRITEMOVEDATA_01, 0, 0, -1, -1, 0, 1, 0, ItemFragment_0x7452b, EVENT_VICTORY_ROAD_MAX_REVIVE
 	person_event SPRITE_POKE_BALL, 29, 18, SPRITEMOVEDATA_01, 0, 0, -1, -1, 0, 1, 0, ItemFragment_0x7452d, EVENT_VICTORY_ROAD_FULL_RESTORE
 	person_event SPRITE_POKE_BALL, 48, 15, SPRITEMOVEDATA_01, 0, 0, -1, -1, 0, 1, 0, ItemFragment_0x7452f, EVENT_VICTORY_ROAD_FULL_HEAL
-	person_event SPRITE_POKE_BALL, 38, 7, SPRITEMOVEDATA_01, 0, 0, -1, -1, 0, 1, 0, ItemFragment_0x74531, EVENT_VICTORY_ROAD_HP_UP
+	person_event SPRITE_MOLTRES, 28, 5, SPRITEMOVEDATA_01, 0, 0, -1, -1, (1 << 3) | PAL_OW_RED, 0, 0, MoltresScript, EVENT_VICTORY_ROAD_MOLTRES

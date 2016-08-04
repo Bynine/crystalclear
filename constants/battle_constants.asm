@@ -61,6 +61,7 @@ const_value SET 1
 	const BATTLETYPE_FORCEITEM
 	const BATTLETYPE_CELEBI
 	const BATTLETYPE_SUICUNE
+	const BATTLETYPE_WIREGAUST
 
 ; battle variables
 	const_def
@@ -315,6 +316,7 @@ SUBSTATUS_CURLED       EQU 0
 	const EFFECT_BEAT_UP
 	const EFFECT_FLY
 	const EFFECT_DEFENSE_CURL
+	const EFFECT_MOON_DANCE
 
 ; Battle vars used in home/battle.asm
 	const_def

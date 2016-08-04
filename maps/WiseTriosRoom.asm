@@ -335,7 +335,7 @@ UnknownText_0x98cac:
 	done
 
 UnknownText_0x98db5:
-	text "Please, do go on."
+	text "Go on!"
 
 	para "SUICUNE will put"
 	line "you to the test."

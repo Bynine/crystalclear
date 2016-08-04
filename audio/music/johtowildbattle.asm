@@ -5,7 +5,7 @@ Music_JohtoWildBattle: ; f5dc5
 ; f5dce
 
 Music_JohtoWildBattle_Ch1: ; f5dce
-	tempo 104
+	tempo 90
 	volume $77
 	dutycycle $3
 	tone $0002

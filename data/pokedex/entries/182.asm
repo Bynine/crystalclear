@@ -2,9 +2,9 @@
 	db "FLOWER@" ; species name
 	dw 104, 130 ; height, width
 	
-	db   "When these dance"
-	next "together, their"
-	next "petals rub against"
-	page "each other,"
+	db   "When they dance"
+	next "together at night,"
+	next "their petals rub"
+	page "with each other's,"
 	next "making pretty,"
 	next "relaxing sounds.@"

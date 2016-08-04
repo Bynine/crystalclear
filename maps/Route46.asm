@@ -154,7 +154,7 @@ MapRoute46Signpost0Script:
 	jumptext UnknownText_0x1a99be
 
 ItemFragment_0x1a978d:
-	db X_SPEED, 1
+	db FABLED_STONE, 1
 
 FruitTreeScript_0x1a978f:
 	fruittree $4

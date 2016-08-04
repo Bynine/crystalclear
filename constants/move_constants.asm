@@ -193,7 +193,7 @@
 	const OCTAZOOKA    ; $be
 	const SPIKES       ; $bf
 	const ZAP_CANNON   ; $c0
-	const FORESIGHT    ; $c1
+	const SWARM        ; $c1
 	const DESTINY_BOND ; $c2
 	const PERISH_SONG  ; $c3
 	const ICY_WIND     ; $c4
@@ -252,7 +252,10 @@
 	const ROCK_SMASH   ; $f9
 	const WHIRLPOOL    ; $fa
 	const BEAT_UP      ; $fb
+	const MOON_DANCE   ; $fc
+	const BIGGLYTUFF   ; $fd
+	const MOVEFE       ; $fe
 
 const_value SET const_value + -1
 
-	const NUM_ATTACKS  ; $fb
+	const NUM_ATTACKS  ; $fe

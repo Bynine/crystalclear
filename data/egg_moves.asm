@@ -40,14 +40,12 @@ SquirtleEggMoves:
 	db HAZE
 	db MIST
 	db CONFUSION
-	db FORESIGHT
 	db FLAIL
 	db $ff
 
 PidgeyEggMoves:
 	db PURSUIT
 	db FAINT_ATTACK
-	db FORESIGHT
 if !_CRYSTAL
 	db STEEL_WING
 endc
@@ -126,6 +124,21 @@ ZubatEggMoves:
 	db WHIRLWIND
 	db $ff
 
+ClefairyEggMoves:
+	db PRESENT
+	db METRONOME
+	db AMNESIA
+	db BELLY_DRUM
+	db SPLASH
+	db MIMIC
+	db $ff
+
+JigglypuffEggMoves:
+	db PERISH_SONG
+	db PRESENT
+	db FAINT_ATTACK
+	db $ff
+
 OddishEggMoves:
 	db SWORDS_DANCE
 	db RAZOR_LEAF
@@ -174,7 +187,6 @@ PsyduckEggMoves:
 	db ICE_BEAM
 	db HYPNOSIS
 	db PSYBEAM
-	db FORESIGHT
 	db LIGHT_SCREEN
 	db FUTURE_SIGHT
 	db PSYCHIC_M
@@ -185,7 +197,6 @@ endc
 
 MankeyEggMoves:
 	db ROCK_SLIDE
-	db FORESIGHT
 	db MEDITATE
 	db COUNTER
 	db REVERSAL
@@ -262,7 +273,6 @@ FarfetchDEggMoves:
 if !_CRYSTAL
 	db STEEL_WING
 endc
-	db FORESIGHT
 	db MIRROR_MOVE
 	db GUST
 	db QUICK_ATTACK
@@ -384,7 +394,6 @@ TangelaEggMoves:
 
 KangaskhanEggMoves:
 	db STOMP
-	db FORESIGHT
 	db FOCUS_ENERGY
 	db SAFEGUARD
 	db DISABLE
@@ -433,11 +442,6 @@ PinsirEggMoves:
 	db FLAIL
 	db $ff
 
-LaprasEggMoves:
-	db AURORA_BEAM
-	db FORESIGHT
-	db $ff
-
 EeveeEggMoves:
 	db FLAIL
 	db CHARM
@@ -462,7 +466,6 @@ KabutoEggMoves:
 AerodactylEggMoves:
 	db WHIRLWIND
 	db PURSUIT
-	db FORESIGHT
 if !_CRYSTAL
 	db STEEL_WING
 endc
@@ -496,7 +499,6 @@ CyndaquilEggMoves:
 	db QUICK_ATTACK
 	db REVERSAL
 	db THRASH
-	db FORESIGHT
 if _CRYSTAL
 	db SUBMISSION
 endc
@@ -559,25 +561,24 @@ PichuEggMoves:
 	db $ff
 
 CleffaEggMoves:
+	db REFLECT
+	db SPITE
+	db DISABLE
+	db LIGHT_SCREEN
+	db BITE
 	db PRESENT
-	db METRONOME
-	db AMNESIA
-	db BELLY_DRUM
-	db SPLASH
-	db MIMIC
 	db $ff
 
 IgglybuffEggMoves:
-	db PERISH_SONG
-	db PRESENT
-	db FAINT_ATTACK
+	db AURORA_BEAM
+	db REFLECT
+	db PSYBEAM
 	db $ff
 
 TogepiEggMoves:
 	db PRESENT
 	db MIRROR_MOVE
 	db PECK
-	db FORESIGHT
 	db FUTURE_SIGHT
 	db $ff
 
@@ -606,7 +607,6 @@ MarillEggMoves:
 	db BELLY_DRUM
 	db PERISH_SONG
 	db SUPERSONIC
-	db FORESIGHT
 	db $ff
 
 SudowoodoEggMoves:
@@ -638,6 +638,7 @@ YanmaEggMoves:
 	db WHIRLWIND
 	db REVERSAL
 	db LEECH_LIFE
+	db ZAP_CANNON
 	db $ff
 
 WooperEggMoves:
@@ -665,7 +666,6 @@ MisdreavusEggMoves:
 GirafarigEggMoves:
 	db TAKE_DOWN
 	db AMNESIA
-	db FORESIGHT
 	db FUTURE_SIGHT
 	db BEAT_UP
 	db $ff
@@ -703,15 +703,15 @@ SnubbullEggMoves:
 	db LEER
 	db $ff
 
-QwilfishEggMoves:
-	db FLAIL
-	db HAZE
-	db BUBBLEBEAM
-	db SUPERSONIC
+WiregaustEggMoves:
+	db SPITE
+	db MIST
 	db $ff
 
 ShuckleEggMoves:
 	db SWEET_SCENT
+	db OUTRAGE
+	db KINESIS
 	db $ff
 
 HeracrossEggMoves:
@@ -723,7 +723,6 @@ HeracrossEggMoves:
 SneaselEggMoves:
 	db COUNTER
 	db SPITE
-	db FORESIGHT
 	db REFLECT
 	db BITE
 	db $ff
@@ -807,15 +806,8 @@ PhanpyEggMoves:
 	db ANCIENTPOWER
 if _CRYSTAL
 	db WATER_GUN
+	db HYDRO_PUMP
 endc
-	db $ff
-
-StantlerEggMoves:
-	db REFLECT
-	db SPITE
-	db DISABLE
-	db LIGHT_SCREEN
-	db BITE
 	db $ff
 
 TyrogueEggMoves:

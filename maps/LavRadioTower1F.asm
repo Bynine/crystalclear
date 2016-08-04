@@ -5,6 +5,36 @@ LavRadioTower1F_MapScriptHeader:
 .MapCallbacks:
 	db 0
 
+WiregaustKantoScript:
+	playmusic MUSIC_RUINS_OF_ALPH_RADIO
+	faceplayer
+	loadfont
+	writetext WiregaustKantoText
+	cry WIREGAUST
+	pause 15
+	loadmovesprites
+	setevent EVENT_FOUGHT_WIREGAUST_KANTO
+	writecode VAR_BATTLETYPE, BATTLETYPE_WIREGAUST
+	loadpokedata WIREGAUST, 50
+	startbattle
+	disappear $2
+	returnafterbattle
+	end
+
+WiregaustKantoText:
+	text "-BZZT- WHAT?"
+	
+	para "YOU -BZZT- CAN"
+	line "SEE ME??"
+
+	para "BZZT! PREPARE TO"
+	line "GET HACKED!"
+	done
+
+RemoveWiregaustKanto:
+	disappear $2
+	return
+
 ReceptionistScript_0x7ee63:
 	jumptextfaceplayer UnknownText_0x7eebf
 
@@ -232,7 +262,8 @@ LavRadioTower1F_MapEventHeader:
 	signpost 0, 5, SIGNPOST_READ, MapLavRadioTower1FSignpost1Script
 
 .PersonEvents:
-	db 5
+	db 6
+	person_event SPRITE_GENGAR, 2, 16, SPRITEMOVEDATA_01, 0, 0, -1, -1, (1 << 3) | PAL_OW_BLUE, 0, 0, WiregaustKantoScript, EVENT_WIREGAUST_KANTO
 	person_event SPRITE_RECEPTIONIST, 6, 6, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, 0, 0, ReceptionistScript_0x7ee63, -1
 	person_event SPRITE_OFFICER, 1, 15, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, 0, 0, OfficerScript_0x7ee66, -1
 	person_event SPRITE_SUPER_NERD, 3, 1, SPRITEMOVEDATA_02, 1, 1, -1, -1, (1 << 3) | PAL_OW_RED, 0, 0, SuperNerdScript_0x7ee69, -1

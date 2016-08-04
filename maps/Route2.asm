@@ -5,6 +5,29 @@ Route2_MapScriptHeader:
 .MapCallbacks:
 	db 0
 
+CelebiScript:
+	faceplayer
+	loadfont
+	writetext CelebiText
+	cry CELEBI
+	pause 15
+	loadmovesprites
+	setevent EVENT_FOUGHT_CELEBI
+	writecode VAR_BATTLETYPE, BATTLETYPE_ROAMING
+	loadpokedata CELEBI, 50
+	startbattle
+	disappear $5
+	returnafterbattle
+	end
+
+CelebiText:
+	text "...!"
+	done
+
+RemoveCelebi:
+	disappear $5
+	return
+
 TrainerBug_catcherRob:
 	trainer EVENT_BEAT_BUG_CATCHER_ROB, BUG_CATCHER, ROB, Bug_catcherRobSeenText, Bug_catcherRobBeatenText, 0, Bug_catcherRobScript
 
@@ -43,9 +66,6 @@ MapRoute2Signpost0Script:
 
 MapRoute2Signpost1Script:
 	jumptext UnknownText_0x1ac49f
-
-ItemFragment_0x1ac2fe:
-	db DIRE_HIT, 1
 
 ItemFragment_0x1ac300:
 	db MAX_POTION, 1
@@ -106,12 +126,13 @@ UnknownText_0x1ac3cf:
 	done
 
 Bug_catcherDougSeenText:
-	text "Why don't girls"
-	line "like bug #MON?"
+	text "Do you like"
+	line "my bug #MON?"
 	done
 
 Bug_catcherDougBeatenText:
-	text "No good!"
+	text "But do you"
+	line "like them?!"
 	done
 
 UnknownText_0x1ac423:
@@ -165,7 +186,7 @@ Route2_MapEventHeader:
 	person_event SPRITE_BUG_CATCHER, 45, 10, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, 2, 5, TrainerBug_catcherRob, -1
 	person_event SPRITE_BUG_CATCHER, 4, 6, SPRITEMOVEDATA_1F, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, 2, 3, TrainerBug_catcherEd, -1
 	person_event SPRITE_BUG_CATCHER, 40, 0, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, (1 << 3) | PAL_OW_BROWN, 2, 3, TrainerBug_catcherDoug, -1
-	person_event SPRITE_POKE_BALL, 29, 0, SPRITEMOVEDATA_01, 0, 0, -1, -1, 0, 1, 0, ItemFragment_0x1ac2fe, EVENT_ROUTE_2_DIRE_HIT
+	person_event SPRITE_FAIRY, 29, 0, SPRITEMOVEDATA_01, 0, 0, -1, -1, (1 << 3) | PAL_OW_GREEN, 0, 0, CelebiScript, EVENT_CELEBI
 	person_event SPRITE_POKE_BALL, 23, 2, SPRITEMOVEDATA_01, 0, 0, -1, -1, 0, 1, 0, ItemFragment_0x1ac300, EVENT_ROUTE_2_MAX_POTION
 	person_event SPRITE_POKE_BALL, 2, 19, SPRITEMOVEDATA_01, 0, 0, -1, -1, 0, 1, 0, ItemFragment_0x1ac302, EVENT_ROUTE_2_CARBOS
 	person_event SPRITE_POKE_BALL, 50, 14, SPRITEMOVEDATA_01, 0, 0, -1, -1, 0, 1, 0, ItemFragment_0x1ac304, EVENT_ROUTE_2_ELIXER

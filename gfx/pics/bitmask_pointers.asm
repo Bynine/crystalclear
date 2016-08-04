@@ -209,7 +209,7 @@ BitmasksPointers:
 	dw SteelixBitmasks
 	dw SnubbullBitmasks
 	dw GranbullBitmasks
-	dw QwilfishBitmasks
+	dw WiregaustBitmasks
 	dw ScizorBitmasks
 	dw ShuckleBitmasks
 	dw HeracrossBitmasks
@@ -250,3 +250,6 @@ BitmasksPointers:
 	dw LugiaBitmasks
 	dw HoOhBitmasks
 	dw CelebiBitmasks
+	dw SamuraiBitmasks
+	dw Dummy254Bitmasks
+	dw Dummy255Bitmasks

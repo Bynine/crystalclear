@@ -69,19 +69,21 @@ UnknownText_0x1adff7:
 	done
 
 YoungsterWarrenSeenText:
-	text "Hmmm… I don't know"
-	line "what to do…"
+	text "Did you see a"
+	line "KABUTO just now?"
 	done
 
 YoungsterWarrenBeatenText:
-	text "I knew I'd lose…"
+	text "Aren't they"
+	line "extinct?..."
 	done
 
 UnknownText_0x1ae051:
-	text "You looked strong."
+	text "I'll be on"
+	line "KABUTO lookout."
 
-	para "I was afraid to"
-	line "take you on…"
+	para "Living fossils…"
+	line "Exciting!"
 	done
 
 YoungsterJimmySeenText:

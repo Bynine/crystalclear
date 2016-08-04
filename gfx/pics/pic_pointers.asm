@@ -422,8 +422,8 @@
 	add_pic SnubbullBackpic
 	add_pic GranbullFrontpic
 	add_pic GranbullBackpic
-	add_pic QwilfishFrontpic
-	add_pic QwilfishBackpic
+	add_pic WiregaustFrontpic
+	add_pic WiregaustBackpic
 	add_pic ScizorFrontpic
 	add_pic ScizorBackpic
 	add_pic ShuckleFrontpic
@@ -504,7 +504,6 @@
 	add_pic HoOhBackpic
 	add_pic CelebiFrontpic
 	add_pic CelebiBackpic
-	dbw -1, -1 ; unused
-	dbw -1, -1 ; unused
+	add_pic SamuraiFrontpic
+	add_pic SamuraiBackpic
 	add_pic EggPic
-	dbw -1, -1 ; unused

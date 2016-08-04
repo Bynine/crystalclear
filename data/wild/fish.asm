@@ -249,10 +249,10 @@ FishGroup2:
 FishGroup2_Old: ; 92504
 	db $b3, MAGIKARP,   10
 	db $d9, MAGIKARP,   10
-	db -1, TENTACOOL,  10
+	db -1, CHINCHOU,  10
 FishGroup2_Good: ; 9250d
 	db $59, MAGIKARP,   20
-	db $b2, TENTACOOL,  20
+	db $b2, CHINCHOU,  20
 	db $e6, CHINCHOU,   20
 	db -1, $0,         2
 FishGroup2_Super: ; 92519
@@ -268,23 +268,23 @@ FishGroup3_Old: ; 92525
 	db -1, GOLDEEN,    10
 FishGroup3_Good: ; 9252e
 	db $59, MAGIKARP,   20
-	db $b2, GOLDEEN,    20
+	db $b2, REMORAID,   20
 	db $e6, GOLDEEN,    20
 	db -1, $0,         4
 FishGroup3_Super: ; 9253a
 	db $66, GOLDEEN,    40
 	db $b2, $0,         5
-	db $e6, MAGIKARP,   40
+	db $e6, CHINCHOU,   40
 	db -1, SEAKING,    40
 
 FishGroup4:
 FishGroup4_Old: ; 92546
 	db $b3, MAGIKARP,   10
 	db $d9, MAGIKARP,   10
-	db -1, POLIWAG,    10
+	db -1, REMORAID,    10
 FishGroup4_Good: ; 9254f
-	db $59, MAGIKARP,   20
-	db $b2, POLIWAG,    20
+	db $59, REMORAID,   20
+	db $b2, REMORAID,   20
 	db $e6, POLIWAG,    20
 	db -1, $0,         6
 FishGroup4_Super: ; 9255b
@@ -313,17 +313,17 @@ FishGroup6:
 FishGroup6_Old: ; 92588
 	db $b3, MAGIKARP,   5
 	db $d9, MAGIKARP,   5
-	db -1, QWILFISH,   5
+	db -1, REMORAID,   5
 FishGroup6_Good: ; 92591
 	db $59, MAGIKARP,   20
-	db $b2, QWILFISH,   20
-	db $e6, QWILFISH,   20
+	db $b2, REMORAID,   20
+	db $e6, REMORAID,   20
 	db -1, $0,         10
 FishGroup6_Super: ; 9259d
-	db $66, QWILFISH,   40
+	db $66, REMORAID,   40
 	db $b2, $0,         11
-	db $e6, QWILFISH,   40
-	db -1, QWILFISH,   40
+	db $e6, REMORAID,   40
+	db -1, REMORAID,   40
 
 FishGroup7:
 FishGroup7_Old: ; 925a9
@@ -354,7 +354,7 @@ FishGroup8_Good: ; 925d3
 FishGroup8_Super: ; 925df
 	db $66, MAGIKARP,   40
 	db $b2, $0,         15
-	db $e6, MAGIKARP,   40
+	db $e6, MAGIKARP,   80
 	db -1, MAGIKARP,   40
 
 FishGroup9:
@@ -380,11 +380,11 @@ FishGroup10_Old: ; 9260c
 	db -1, KRABBY,     10
 FishGroup10_Good: ; 92615
 	db $59, MAGIKARP,   20
-	db $b2, KRABBY,     20
+	db $b2, SHELLDER,     20
 	db $e6, KRABBY,     20
 	db -1, $0,         18
 FishGroup10_Super: ; 92621
-	db $66, KRABBY,     40
+	db $66, CLOYSTER,     40
 	db $b2, $0,         19
 	db $e6, KINGLER,    40
 	db -1, SEADRA,     40
@@ -397,13 +397,13 @@ FishGroup11_Old: ; 9262d
 FishGroup11_Good: ; 92636
 	db $59, MAGIKARP,   20
 	db $b2, TENTACOOL,  20
-	db $e6, TENTACOOL,  20
+	db $e6, CHINCHOU,  20
 	db -1, $0,         20
 FishGroup11_Super: ; 92642
-	db $66, TENTACOOL,  40
+	db $66, TENTACRUEL,  40
 	db $b2, $0,         21
-	db $e6, MAGIKARP,   40
-	db -1, QWILFISH,   40
+	db $e6, LANTURN,   40
+	db -1, REMORAID,   40
 
 FishGroup12:
 FishGroup12_Old: ; 9264e
@@ -413,12 +413,12 @@ FishGroup12_Old: ; 9264e
 FishGroup12_Good: ; 92657
 	db $59, MAGIKARP,   20
 	db $b2, POLIWAG,    20
-	db $e6, POLIWAG,    20
+	db $e6, CHINCHOU,    20
 	db -1, $0,         6
 FishGroup12_Super: ; 92663
-	db $66, POLIWAG,    40
+	db $66, POLIWHIRL,    40
 	db $b2, $0,         7
-	db $e6, MAGIKARP,   40
+	db $e6, LANTURN,   40
 	db -1, REMORAID,   40
 
 ; 9266f
@@ -455,11 +455,11 @@ TimeFishGroups: ; 9266f
 	db DRATINI,    40 ; nite
 	db DRATINI,    40 ; day
 ; 10
-	db QWILFISH,   20 ; nite
-	db QWILFISH,   20 ; day
+	db REMORAID,   20 ; nite
+	db REMORAID,   20 ; day
 ; 11
-	db QWILFISH,   40 ; nite
-	db QWILFISH,   40 ; day
+	db REMORAID,   40 ; nite
+	db REMORAID,   40 ; day
 ; 12
 	db REMORAID,   20 ; nite
 	db REMORAID,   20 ; day

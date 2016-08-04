@@ -191,7 +191,7 @@
 	dw OctazookaDescription
 	dw SpikesDescription
 	dw ZapCannonDescription
-	dw ForesightDescription
+	dw SwarmDescription
 	dw DestinyBondDescription
 	dw PerishSongDescription
 	dw IcyWindDescription
@@ -250,16 +250,13 @@
 	dw RockSmashDescription
 	dw WhirlpoolDescription
 	dw BeatUpDescription
-	dw MoveFCDescription
-	dw MoveFDDescription
+	dw MoonDanceDescription
+	dw BigglytuffDescription
 	dw MoveFEDescription
 	dw MoveFFDescription
 	dw Move00Description
 ; 2cd52
 
-MoveFCDescription:
-MoveFDDescription:
-MoveFEDescription:
 MoveFFDescription:
 Move00Description:
 UnknownMoveDescription:
@@ -394,8 +391,8 @@ HornDrillDescription:
 	next "drill attack.@"
 
 TackleDescription:
-	db   "A full-body charge"
-	next "attack.@"
+	db   "A full-body"
+	next "ramming attack.@"
 
 BodySlamDescription:
 	db   "An attack that may"
@@ -770,8 +767,8 @@ FireBlastDescription:
 	next "may cause a burn.@"
 
 WaterfallDescription:
-	db   "An aquatic charge"
-	next "attack.@"
+	db   "An charging attack"
+	next "to climb high.@"
 
 ClampDescription:
 	db   "Traps the foe for"
@@ -786,8 +783,8 @@ SkullBashDescription:
 	next "2nd turn: Attack@"
 
 SpikeCannonDescription:
-	db   "Fires spikes to"
-	next "hit 2-5 times.@"
+	db   "Attacks with"
+	next "sword strikes.@"
 
 ConstrictDescription:
 	db   "An attack that may"
@@ -798,8 +795,8 @@ AmnesiaDescription:
 	next "user's SPCL.DEF.@"
 
 KinesisDescription:
-	db   "Reduces the foe's"
-	next "accuracy.@"
+	db   "Fires sticky web"
+	next "from its thorax.@"
 
 SoftboiledDescription:
 	db   "Restores HP by 1/2"
@@ -818,8 +815,8 @@ DreamEaterDescription:
 	next "sleeping victim.@"
 
 PoisonGasDescription:
-	db   "A move that may"
-	next "poison the foe.@"
+	db   "A gross burp that"
+	next "always poisons.@"
 
 BarrageDescription:
 	db   "Throws orbs to hit"
@@ -1017,8 +1014,8 @@ SludgeBombDescription:
 	next "poison the foe.@"
 
 MudSlapDescription:
-	db   "Reduces the foe's"
-	next "accuracy.@"
+	db   "A superfast dive"
+	next "that won't miss.@"
 
 OctazookaDescription:
 	db   "An attack that may"
@@ -1032,9 +1029,9 @@ ZapCannonDescription:
 	db   "An attack that"
 	next "always paralyzes.@"
 
-ForesightDescription:
-	db   "Negates accuracy"
-	next "reduction moves.@"
+SwarmDescription:
+	db   "A swarm of insects"
+	next "harass the foe.@"
 
 DestinyBondDescription:
 	db   "The foe faints if"
@@ -1134,7 +1131,7 @@ PresentDescription:
 
 FrustrationDescription:
 	db   "An attack based on"
-	next "lack of loyalty.@"
+	next "anger and hate.@"
 
 SafeguardDescription:
 	db   "Prevents all"
@@ -1157,8 +1154,8 @@ DynamicpunchDescription:
 	next "always confuses.@"
 
 MegahornDescription:
-	db   "A powerful charge"
-	next "attack.@"
+	db   "A powerful"
+	next "stabbing attack.@"
 
 DragonbreathDescription:
 	db   "A strong breath"
@@ -1181,8 +1178,8 @@ RapidSpinDescription:
 	next "spinning attack.@"
 
 SweetScentDescription:
-	db   "Reduces the foe's"
-	next "evasiveness.@"
+	db   "Sharply lowers the"
+	next "foe's ATTACK.@"
 
 IronTailDescription:
 	db   "An attack that may"
@@ -1197,16 +1194,16 @@ VitalThrowDescription:
 	next "that never misses.@"
 
 MorningSunDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+	db   "Restores more HP"
+	next "when sunny.@"
 
 SynthesisDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+	db   "Restores more HP"
+	next "when sunny.@"
 
 MoonlightDescription:
-	db   "Restores HP"
-	next "(varies by time).@"
+	db   "Restores more HP"
+	next "when raining.@"
 
 HiddenPowerDescription:
 	db   "The power varies"
@@ -1261,10 +1258,22 @@ RockSmashDescription:
 	next "lower DEFENSE.@"
 
 WhirlpoolDescription:
-	db   "Traps the foe for"
-	next "2-5 turns.@"
+	db   "Calms the air to"
+	next "boost SPCL. ATK.@"
 
 BeatUpDescription:
 	db   "Party #MON join"
 	next "in the attack.@"
+
+MoonDanceDescription:
+	db   "A moonlit jig that"
+	next "may raise stats.@"
+
+BigglytuffDescription:
+	db   "Wigglytuff becomes"
+	next "furious - run!!!@"
+
+MoveFEDescription:
+	db   "Contact BYNINE-"
+	next "something's off.@"
 ; 2ed44

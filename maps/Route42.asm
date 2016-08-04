@@ -258,16 +258,17 @@ UnknownText_0x1a943f:
 	done
 
 PokemaniacShaneSeenText:
-	text "HEY!"
+	text "Hahaha...! You're"
+	line "done for!"
 
-	para "This is my secret"
-	line "place! Get lost,"
-	cont "you outsider!"
+	para "I evolved my"
+	line "#MON early with"
+	cont "stones!"
 	done
 
 PokemaniacShaneBeatenText:
-	text "I should have used"
-	line "my MOON STONE…"
+	text "They weren't able"
+	line "to learn moves..."
 	done
 
 UnknownText_0x1a94d6:

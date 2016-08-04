@@ -1,14 +1,7 @@
-# Pokémon Crystal
+# Pokémon Crystal Clear
 
-This is a disassembly of Pokémon Crystal.
-
-It builds the following roms:
-
-* Pokemon - Crystal Version (UE) (V1.0) [C][!].gbc `md5: 9f2922b235a5eeb78d65594e82ef5dde`
-* Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc `md5: 301899b8087289a6436b0a241fbbb474`
-
-To set up the repository, see [**INSTALL.md**](INSTALL.md).
-
+This is a disassembly of Pokémon Crystal Clear, a romhack of Pokemon Crystal. 
+Most of it is uninteresting, but please look at the EVOLVE_GENDER routine in main.asm.
 
 ## See also
 

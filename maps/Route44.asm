@@ -302,7 +302,7 @@ ItemFragment_0x19da44:
 	db ULTRA_BALL, 1
 
 ItemFragment_0x19da46:
-	db MAX_REPEL, 1
+	db FABLED_STONE, 1
 
 MapRoute44SignpostItem2:
 	dwb EVENT_ROUTE_44_HIDDEN_ELIXER, ELIXER

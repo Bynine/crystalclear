@@ -398,7 +398,7 @@ _AskSurfText: ; 1c066c
 UnknownText_0x1c068e: ; 1c068e
 	text_from_ram StringBuffer2
 	text " used"
-	line "WATERFALL!"
+	line "ASCEND!"
 	done
 ; 1c06a3
 
@@ -410,7 +410,7 @@ UnknownText_0x1c06a3: ; 1c06a3
 
 UnknownText_0x1c06bf: ; 1c06bf
 	text "Do you want to use"
-	line "WATERFALL?"
+	line "ASCEND?"
 	done
 ; 1c06de
 
@@ -490,7 +490,7 @@ UnknownText_0x1c07f4: ; 1c07f4
 UnknownText_0x1c0816: ; 1c0816
 	text_from_ram StringBuffer2
 	text " used"
-	line "WHIRLPOOL!"
+	line "STILL!"
 	prompt
 ; 1c082b
 
@@ -499,7 +499,7 @@ UnknownText_0x1c082b: ; 1c082b
 	line "whirlpool!"
 
 	para "A #MON may be"
-	line "able to pass it."
+	line "able to calm it."
 	done
 ; 1c0864
 
@@ -508,7 +508,7 @@ UnknownText_0x1c0864: ; 1c0864
 	line "the way."
 
 	para "Want to use"
-	line "WHIRLPOOL?"
+	line "STILL?"
 	done
 ; 1c0897
 
